@@ -28,11 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            this.trackBar1 = new System.Windows.Forms.TrackBar();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            this.Jaarbalk = new System.Windows.Forms.TrackBar();
             this.ShowText = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -45,33 +42,31 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.control1 = new System.Windows.Forms.Control();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            this.GelderlandButton = new System.Windows.Forms.Button();
+            this.FlevolandButton = new System.Windows.Forms.Button();
+            this.DrentheButton = new System.Windows.Forms.Button();
+            this.GroningenButton = new System.Windows.Forms.Button();
+            this.DataShow = new System.Windows.Forms.TextBox();
+            this.DrugRadioBtn = new System.Windows.Forms.RadioButton();
+            this.VernielingenRadioBtn = new System.Windows.Forms.RadioButton();
+            this.TotaleRadioBtn = new System.Windows.Forms.RadioButton();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            ((System.ComponentModel.ISupportInitialize)(this.Jaarbalk)).BeginInit();
             this.SuspendLayout();
             // 
-            // trackBar1
+            // Jaarbalk
             // 
-            this.trackBar1.Location = new System.Drawing.Point(200, 731);
-            this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(503, 56);
-            this.trackBar1.TabIndex = 1;
-            this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Location = new System.Drawing.Point(890, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip1.Size = new System.Drawing.Size(30, 843);
-            this.menuStrip1.TabIndex = 2;
-            this.menuStrip1.Text = "menuStrip1";
+            this.Jaarbalk.Location = new System.Drawing.Point(446, 756);
+            this.Jaarbalk.Name = "Jaarbalk";
+            this.Jaarbalk.Size = new System.Drawing.Size(503, 56);
+            this.Jaarbalk.TabIndex = 1;
+            this.Jaarbalk.Value = 10;
+            this.Jaarbalk.Scroll += new System.EventHandler(this.trackBar1_Scroll);
             // 
             // ShowText
             // 
@@ -80,7 +75,7 @@
             this.ShowText.Enabled = false;
             this.ShowText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ShowText.ForeColor = System.Drawing.Color.Black;
-            this.ShowText.Location = new System.Drawing.Point(311, 21);
+            this.ShowText.Location = new System.Drawing.Point(525, 32);
             this.ShowText.Multiline = true;
             this.ShowText.Name = "ShowText";
             this.ShowText.ReadOnly = true;
@@ -93,7 +88,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(199, 770);
+            this.label1.Location = new System.Drawing.Point(445, 795);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 17);
             this.label1.TabIndex = 5;
@@ -104,7 +99,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(244, 770);
+            this.label2.Location = new System.Drawing.Point(490, 795);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 17);
             this.label2.TabIndex = 6;
@@ -115,7 +110,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(287, 770);
+            this.label3.Location = new System.Drawing.Point(533, 795);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(44, 17);
             this.label3.TabIndex = 7;
@@ -125,7 +120,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(337, 770);
+            this.label4.Location = new System.Drawing.Point(583, 795);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(44, 17);
             this.label4.TabIndex = 8;
@@ -135,7 +130,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(384, 770);
+            this.label5.Location = new System.Drawing.Point(630, 795);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(44, 17);
             this.label5.TabIndex = 9;
@@ -145,7 +140,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(431, 770);
+            this.label6.Location = new System.Drawing.Point(677, 795);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(44, 17);
             this.label6.TabIndex = 10;
@@ -155,7 +150,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(477, 770);
+            this.label7.Location = new System.Drawing.Point(723, 795);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(44, 17);
             this.label7.TabIndex = 11;
@@ -165,7 +160,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(571, 770);
+            this.label8.Location = new System.Drawing.Point(817, 795);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(44, 17);
             this.label8.TabIndex = 12;
@@ -175,7 +170,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(525, 770);
+            this.label9.Location = new System.Drawing.Point(771, 795);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(44, 17);
             this.label9.TabIndex = 13;
@@ -186,7 +181,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(659, 770);
+            this.label10.Location = new System.Drawing.Point(905, 795);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(44, 17);
             this.label10.TabIndex = 14;
@@ -196,90 +191,210 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(617, 770);
+            this.label11.Location = new System.Drawing.Point(863, 795);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(44, 17);
             this.label11.TabIndex = 15;
             this.label11.Text = "2015";
             this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
-            // button1
+            // GelderlandButton
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = global::Project3.Properties.Resources.Zeeland;
-            this.button1.Location = new System.Drawing.Point(117, 310);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(201, 215);
-            this.button1.TabIndex = 16;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.GelderlandButton.BackColor = System.Drawing.Color.Transparent;
+            this.GelderlandButton.FlatAppearance.BorderSize = 0;
+            this.GelderlandButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.GelderlandButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.GelderlandButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.GelderlandButton.ForeColor = System.Drawing.Color.White;
+            this.GelderlandButton.Image = ((System.Drawing.Image)(resources.GetObject("GelderlandButton.Image")));
+            this.GelderlandButton.Location = new System.Drawing.Point(392, 386);
+            this.GelderlandButton.Name = "GelderlandButton";
+            this.GelderlandButton.Size = new System.Drawing.Size(348, 303);
+            this.GelderlandButton.TabIndex = 17;
+            this.GelderlandButton.UseVisualStyleBackColor = false;
+            this.GelderlandButton.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button2
+            // FlevolandButton
             // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = global::Project3.Properties.Resources.Gelderland;
-            this.button2.Location = new System.Drawing.Point(290, 125);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(201, 215);
-            this.button2.TabIndex = 17;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.FlevolandButton.BackColor = System.Drawing.Color.Transparent;
+            this.FlevolandButton.FlatAppearance.BorderSize = 0;
+            this.FlevolandButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.FlevolandButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.FlevolandButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FlevolandButton.ForeColor = System.Drawing.Color.White;
+            this.FlevolandButton.Image = ((System.Drawing.Image)(resources.GetObject("FlevolandButton.Image")));
+            this.FlevolandButton.Location = new System.Drawing.Point(751, 72);
+            this.FlevolandButton.Name = "FlevolandButton";
+            this.FlevolandButton.Size = new System.Drawing.Size(173, 198);
+            this.FlevolandButton.TabIndex = 18;
+            this.FlevolandButton.UseVisualStyleBackColor = false;
+            this.FlevolandButton.Click += new System.EventHandler(this.FlevolandButton_Click);
             // 
-            // button3
+            // DrentheButton
             // 
-            this.button3.Location = new System.Drawing.Point(607, 240);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 18;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.DrentheButton.BackColor = System.Drawing.Color.Transparent;
+            this.DrentheButton.FlatAppearance.BorderSize = 0;
+            this.DrentheButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.DrentheButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.DrentheButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DrentheButton.ForeColor = System.Drawing.Color.White;
+            this.DrentheButton.Image = ((System.Drawing.Image)(resources.GetObject("DrentheButton.Image")));
+            this.DrentheButton.Location = new System.Drawing.Point(436, 111);
+            this.DrentheButton.Name = "DrentheButton";
+            this.DrentheButton.Size = new System.Drawing.Size(181, 183);
+            this.DrentheButton.TabIndex = 19;
+            this.DrentheButton.UseVisualStyleBackColor = false;
+            this.DrentheButton.Click += new System.EventHandler(this.DrentheButton_Click);
             // 
-            // control1
+            // GroningenButton
             // 
-            this.control1.Location = new System.Drawing.Point(298, 133);
-            this.control1.Name = "control1";
-            this.control1.Size = new System.Drawing.Size(75, 23);
-            this.control1.TabIndex = 19;
-            this.control1.Text = "control1";
+            this.GroningenButton.BackColor = System.Drawing.Color.Transparent;
+            this.GroningenButton.FlatAppearance.BorderSize = 0;
+            this.GroningenButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.GroningenButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.GroningenButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.GroningenButton.ForeColor = System.Drawing.Color.White;
+            this.GroningenButton.Image = ((System.Drawing.Image)(resources.GetObject("GroningenButton.Image")));
+            this.GroningenButton.Location = new System.Drawing.Point(986, 74);
+            this.GroningenButton.Name = "GroningenButton";
+            this.GroningenButton.Size = new System.Drawing.Size(212, 196);
+            this.GroningenButton.TabIndex = 20;
+            this.GroningenButton.UseVisualStyleBackColor = false;
+            this.GroningenButton.Click += new System.EventHandler(this.GroningenButton_Click);
             // 
-            // chart1
+            // DataShow
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(480, 199);
-            this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(300, 300);
-            this.chart1.TabIndex = 20;
-            this.chart1.Text = "chart1";
-            this.chart1.Click += new System.EventHandler(this.chart1_Click);
+            this.DataShow.AcceptsReturn = true;
+            this.DataShow.BackColor = System.Drawing.Color.FloralWhite;
+            this.DataShow.Cursor = System.Windows.Forms.Cursors.No;
+            this.DataShow.HideSelection = false;
+            this.DataShow.Location = new System.Drawing.Point(58, 327);
+            this.DataShow.Multiline = true;
+            this.DataShow.Name = "DataShow";
+            this.DataShow.ReadOnly = true;
+            this.DataShow.Size = new System.Drawing.Size(300, 282);
+            this.DataShow.TabIndex = 23;
+            this.DataShow.TextChanged += new System.EventHandler(this.textBox1_TextChanged_2);
+            // 
+            // DrugRadioBtn
+            // 
+            this.DrugRadioBtn.AutoSize = true;
+            this.DrugRadioBtn.Location = new System.Drawing.Point(1097, 500);
+            this.DrugRadioBtn.Name = "DrugRadioBtn";
+            this.DrugRadioBtn.Size = new System.Drawing.Size(130, 21);
+            this.DrugRadioBtn.TabIndex = 29;
+            this.DrugRadioBtn.Text = "Drugsmisdrijven";
+            this.DrugRadioBtn.UseVisualStyleBackColor = true;
+            // 
+            // VernielingenRadioBtn
+            // 
+            this.VernielingenRadioBtn.AutoSize = true;
+            this.VernielingenRadioBtn.Location = new System.Drawing.Point(1097, 463);
+            this.VernielingenRadioBtn.Name = "VernielingenRadioBtn";
+            this.VernielingenRadioBtn.Size = new System.Drawing.Size(108, 21);
+            this.VernielingenRadioBtn.TabIndex = 28;
+            this.VernielingenRadioBtn.Text = "Vernielingen";
+            this.VernielingenRadioBtn.UseVisualStyleBackColor = true;
+            // 
+            // TotaleRadioBtn
+            // 
+            this.TotaleRadioBtn.AutoSize = true;
+            this.TotaleRadioBtn.Location = new System.Drawing.Point(1097, 430);
+            this.TotaleRadioBtn.Name = "TotaleRadioBtn";
+            this.TotaleRadioBtn.Size = new System.Drawing.Size(136, 21);
+            this.TotaleRadioBtn.TabIndex = 27;
+            this.TotaleRadioBtn.Text = "Misdrijven Totaal";
+            this.TotaleRadioBtn.UseVisualStyleBackColor = true;
+            this.TotaleRadioBtn.CheckedChanged += new System.EventHandler(this.TotaleRadioBtn_CheckedChanged);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(905, 400);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(128, 17);
+            this.label12.TabIndex = 30;
+            this.label12.Text = "Kies een provincie:";
+            this.label12.Click += new System.EventHandler(this.label12_Click);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(1094, 400);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(147, 17);
+            this.label13.TabIndex = 31;
+            this.label13.Text = "Kies het soort misdrijf:";
+            this.label13.Click += new System.EventHandler(this.label13_Click);
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(717, 377);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(98, 21);
+            this.checkBox1.TabIndex = 32;
+            this.checkBox1.Text = "checkBox1";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(436, 377);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(98, 21);
+            this.checkBox2.TabIndex = 33;
+            this.checkBox2.Text = "checkBox2";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Location = new System.Drawing.Point(717, 501);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(98, 21);
+            this.checkBox3.TabIndex = 34;
+            this.checkBox3.Text = "checkBox3";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // checkedListBox1
+            // 
+            this.checkedListBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.checkedListBox1.CheckOnClick = true;
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.IntegralHeight = false;
+            this.checkedListBox1.Items.AddRange(new object[] {
+            "Flevoland",
+            "Drenthe",
+            "Groningen"});
+            this.checkedListBox1.Location = new System.Drawing.Point(903, 420);
+            this.checkedListBox1.MultiColumn = true;
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(130, 185);
+            this.checkedListBox1.TabIndex = 35;
+            this.checkedListBox1.ThreeDCheckBoxes = true;
+            this.checkedListBox1.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(240)))));
-            this.ClientSize = new System.Drawing.Size(920, 843);
-            this.Controls.Add(this.chart1);
-            this.Controls.Add(this.control1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(1364, 914);
+            this.Controls.Add(this.checkedListBox1);
+            this.Controls.Add(this.checkBox3);
+            this.Controls.Add(this.checkBox2);
+            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.DrugRadioBtn);
+            this.Controls.Add(this.VernielingenRadioBtn);
+            this.Controls.Add(this.TotaleRadioBtn);
+            this.Controls.Add(this.DrentheButton);
+            this.Controls.Add(this.FlevolandButton);
+            this.Controls.Add(this.DataShow);
+            this.Controls.Add(this.GroningenButton);
+            this.Controls.Add(this.GelderlandButton);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -291,23 +406,19 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.trackBar1);
-            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.Jaarbalk);
             this.Controls.Add(this.ShowText);
-            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Crime Statistics Application";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Jaarbalk)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.TrackBar trackBar1;
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.TrackBar Jaarbalk;
         private System.Windows.Forms.TextBox ShowText;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -320,11 +431,20 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Control control1;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        public System.Windows.Forms.Button GelderlandButton;
+        public System.Windows.Forms.Button FlevolandButton;
+        public System.Windows.Forms.Button DrentheButton;
+        public System.Windows.Forms.Button GroningenButton;
+        private System.Windows.Forms.TextBox DataShow;
+        private System.Windows.Forms.RadioButton DrugRadioBtn;
+        private System.Windows.Forms.RadioButton VernielingenRadioBtn;
+        private System.Windows.Forms.RadioButton TotaleRadioBtn;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.CheckedListBox checkedListBox1;
     }
 }
 
