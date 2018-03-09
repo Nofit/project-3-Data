@@ -166,63 +166,13 @@ namespace Project3
 
         private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string misdrijf_filter = "";
-        
             if (checkedListBox1.SelectedIndex == 0)
             {
-                //Unchecks Checked Item
                 checkedListBox1.SetItemChecked(1, false);
                 checkedListBox1.SetItemChecked(2, false);
 
+
                 /// Checks if Flevoland button is checked or not.. if so.. it changes the image, otherwise not.
-
-                ShowText.Text = "Flevoland";
-                //Load data on textbox
-
-                //Eerste Argument is voor de column_naam, het tweede argument is voor Extended query die achter 'FROM tableName' komt
-                DataTable dt = gm1.SelectFlevoland("*", misdrijf_filter);
-
-                int counter = 0;
-                string data = "";
-                foreach (DataRow row in dt.Rows)
-                {
-                    counter++;
-                    data = data + (counter + ". " + row[0] + " " + row[1] + "\r\n"); /// Appearance van de informatie..
-
-                }
-                DataShow.Text = data;
-
-                if (Return_Checked() == true)
-                {
-                    misdrijf_filter = "WHERE Soort_misdrijf LIKE 'Totaal%'";
-                    dt = gm1.SelectFlevoland("*", misdrijf_filter);
-
-                    counter = 0;
-                    data = "";
-                    foreach (DataRow row in dt.Rows)
-                    {
-                        counter++;
-                        data = data + (counter + ". " + row[0] + " " + row[1] + "\r\n"); /// Appearance van de informatie..
-
-                    }
-                    DataShow.Text = data;
-                }
-                else
-                {
-                    misdrijf_filter = "WHERE Soort_misdrijf LIKE 'Totaal%'";
-                    dt = gm1.SelectFlevoland("*", misdrijf_filter);
-
-                    counter = 0;
-                    data = "";
-                    foreach (DataRow row in dt.Rows)
-                    {
-                        counter++;
-                        data = data + (counter + ". " + row[0] + " " + row[1] + "\r\n"); /// Appearance van de informatie..
-
-                    }
-                    DataShow.Text = data; misdrijf_filter = "WHERE Soort_misdrijf LIKE 'Totaal%'";
-                }
-
 
                 FlevolandButton.Image = Project3.Properties.Resources.Volle_kaart;
             }
@@ -292,10 +242,78 @@ namespace Project3
                 GroningenButton.Image = Project3.Properties.Resources.Groningen;
             }
 
+        }
+
+        private void checkedListBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string misdrijf_filter = "";
+
+            if (checkedListBox1.SelectedIndex == 0) //Flevoland
+            {
+                //Unchecks Checked Item
 
 
+                ShowText.Text = "Flevoland";
+                //Load data on textbox
+
+                //Eerste Argument is voor de column_naam, het tweede argument is voor Extended query die achter 'FROM tableName' komt
+                DataTable dt = gm1.SelectFlevoland("*", misdrijf_filter);
+
+                int counter = 0;
+                string data = "";
+                foreach (DataRow row in dt.Rows)
+                {
+                    counter++;
+                    data = data + (counter + ". " + row[0] + " " + row[1] + "\r\n"); /// Appearance van de informatie..
+
+                }
+                DataShow.Text = data;
+
+                if (checkedListBox2.GetItemChecked(0)) //Totaal 
+                {
+                    //Unchecks Checked Item
+                    checkedListBox2.SetItemChecked(1, false);
+                    checkedListBox2.SetItemChecked(2, false);
+
+                    misdrijf_filter = "WHERE Soort_misdrijf LIKE 'Totaal%'";
+
+                    dt = gm1.SelectFlevoland("*", misdrijf_filter);
+
+                    counter = 0;
+                    data = "";
+                    foreach (DataRow row in dt.Rows)
+                    {
+                        counter++;
+                        data = data + (counter + ". " + row[0] + " " + row[1] + "\r\n"); /// Appearance van de informatie..
+
+                    }
+
+                    DataShow.Text = data;
+
+                }
+                else
+                {
+                    //Unchecks Checked Item
+                    //checkedListBox2.SetItemChecked(1, false);
+                    //checkedListBox2.SetItemChecked(2, false);
+
+                    misdrijf_filter = "";
+
+                    dt = gm1.SelectFlevoland("*", misdrijf_filter);
+
+                    counter = 0;
+                    data = "";
+                    foreach (DataRow row in dt.Rows)
+                    {
+                        counter++;
+                        data = data + (counter + ". " + row[0] + " " + row[1] + "\r\n"); /// Appearance van de informatie..
+
+                    }
+
+                    DataShow.Text = data;
+                }
+            }
 
         }
-       
     }
 }

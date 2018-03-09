@@ -56,6 +56,7 @@
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
             ((System.ComponentModel.ISupportInitialize)(this.Jaarbalk)).BeginInit();
             this.SuspendLayout();
             // 
@@ -375,12 +376,31 @@
             this.checkedListBox1.ThreeDCheckBoxes = true;
             this.checkedListBox1.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
             // 
+            // checkedListBox2
+            // 
+            this.checkedListBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.checkedListBox2.CheckOnClick = true;
+            this.checkedListBox2.FormattingEnabled = true;
+            this.checkedListBox2.IntegralHeight = false;
+            this.checkedListBox2.Items.AddRange(new object[] {
+            "Misdrijven Totaal",
+            "Vernielingen",
+            "Drugsmisdrijven"});
+            this.checkedListBox2.Location = new System.Drawing.Point(1097, 420);
+            this.checkedListBox2.MultiColumn = true;
+            this.checkedListBox2.Name = "checkedListBox2";
+            this.checkedListBox2.Size = new System.Drawing.Size(130, 185);
+            this.checkedListBox2.TabIndex = 36;
+            this.checkedListBox2.ThreeDCheckBoxes = true;
+            this.checkedListBox2.SelectedIndexChanged += new System.EventHandler(this.checkedListBox2_SelectedIndexChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(240)))));
             this.ClientSize = new System.Drawing.Size(1364, 914);
+            this.Controls.Add(this.checkedListBox2);
             this.Controls.Add(this.checkedListBox1);
             this.Controls.Add(this.checkBox3);
             this.Controls.Add(this.checkBox2);
@@ -445,6 +465,7 @@
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.CheckedListBox checkedListBox2;
     }
 }
 
