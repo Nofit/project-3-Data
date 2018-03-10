@@ -155,15 +155,6 @@ namespace Project3
 
         }
 
-        private void TotaleRadioBtn_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-        private bool Return_Checked()
-        {
-            return TotaleRadioBtn.Checked;
-        }
-
         private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (checkedListBox1.SelectedIndex == 0)
@@ -252,7 +243,6 @@ namespace Project3
             {
                 //Unchecks Checked Item
 
-
                 ShowText.Text = "Flevoland";
                 //Load data on textbox
 
@@ -313,6 +303,31 @@ namespace Project3
                     DataShow.Text = data;
                 }
             }
+
+        }
+
+        private void pictureBox1_Click_4(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton12_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton5_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton6_CheckedChanged(object sender, EventArgs e)
+        {
 
         }
     }
