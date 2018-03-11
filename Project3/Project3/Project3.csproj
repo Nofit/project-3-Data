@@ -131,5 +131,16 @@
   <ItemGroup>
     <None Include="Images\losseprovincies\Zuid Holland.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\Drenthe_arced.png" />
+    <Content Include="Images\Flevoland_arced.png" />
+    <Content Include="Images\Gelderland_arced.png" />
+    <Content Include="Images\Groningen_arced.png" />
+    <None Include="Resources\full_map.png" />
+    <None Include="Resources\Groningen_arced.png" />
+    <None Include="Resources\Gelderland_arced.png" />
+    <None Include="Resources\Flevoland_arced.png" />
+    <None Include="Resources\Drenthe_arced.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

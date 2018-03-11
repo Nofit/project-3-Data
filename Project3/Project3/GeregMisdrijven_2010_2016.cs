@@ -32,7 +32,7 @@ namespace Project3
         static string myconnstrng = ConfigurationManager.ConnectionStrings["connstrng"].ConnectionString;
 
         //Selecting data from database
-        public DataTable Select(string province, string columnName = "*", string extquery = "")
+        public DataTable Select(string province, string columnName, string extquery)
         {
             //Step 1 Database Connection
             SqlConnection conn = new SqlConnection(myconnstrng);

@@ -18,6 +18,9 @@ namespace Project3
         }
 
         GeregMisdrijven_2010_2016 gm1 = new GeregMisdrijven_2010_2016();
+        string totaal_query = "WHERE Soort_misdrijf LIKE 'Totaal%'";
+        string verniel_query = "WHERE Soort_misdrijf LIKE 'Vernielingen'";
+        string drugs_query = "WHERE Soort_misdrijf LIKE 'Drug%'";
         
 
 
@@ -90,19 +93,8 @@ namespace Project3
         {
             ShowText.Text = "Gelderland";
             //Load data on textbox
+            data_format("Gelderland");
 
-            //Eerste Argument is voor de column_naam, het tweede argument is voor Extended query die achter 'FROM tableName' komt
-            DataTable dt = gm1.Select("Gelderland");
-
-            int counter = 0;
-            string data = "";
-            foreach (DataRow row in dt.Rows)
-            {
-                counter++;
-                data = data + (counter + ". " + row[0] + " " + row[1] + "\r\n"); /// Appearance van de informatie..
-
-            }
-            DataShow.Text = data;
         }
 
         private void chart1_Click(object sender, EventArgs e)
@@ -168,73 +160,52 @@ namespace Project3
                 provinceBox.SetItemChecked(2, false);
 
                 ShowText.Text = "Flevoland";
+
+                crimeCategoryBox.SetSelected(0, true);
+                crimeCategoryBox.SetItemChecked(0, true);
+
+                pictureBox1.Image = Project3.Properties.Resources.Flevoland_arced;
             }
-            else
-            {
-            }
+
 
             if (provinceBox.SelectedIndex == 1)
             {
-                ///checkedListBox1.SetItemCheckState(0, uncheck1);
+
                 provinceBox.SetItemChecked(0, false);
                 provinceBox.SetItemChecked(2, false);        
 
                 ShowText.Text = "Drenthe";
- 
+
+                crimeCategoryBox.SetSelected(0, true);
+                crimeCategoryBox.SetItemChecked(0, true);
+
+                pictureBox1.Image = Project3.Properties.Resources.Drenthe_arced;
             }
 
             if (provinceBox.SelectedIndex == 2)
             {
-                ///checkedListBox1.SetItemCheckState(0, uncheck1);
+
                 provinceBox.SetItemChecked(0, false);
                 provinceBox.SetItemChecked(1, false);
 
-
                 ShowText.Text = "Groningen";
-                //Load data on textbox
 
-                //Eerste Argument is voor de column_naam, het tweede argument is voor Extended query die achter 'FROM tableName' komt
-                DataTable dt = gm1.Select("Groningen");
+                crimeCategoryBox.SetSelected(0, true);
+                crimeCategoryBox.SetItemChecked(0, true);
 
-                int counter = 0;
-                string data = "";
-                foreach (DataRow row in dt.Rows)
-                {
-                    counter++;
-                    data = data + (counter + ". " + row[0] + " " + row[1] + "\r\n"); /// Appearance van de informatie..
 
-                }
-                DataShow.Text = data;
-            }
-            else
-            {
+                pictureBox1.Image = Project3.Properties.Resources.Groningen_arced;
             }
 
         }
 
         private void checkedListBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string misdrijf_filter = "";
 
             if (provinceBox.SelectedIndex == 0) //Flevoland
-            {
-                //Unchecks Checked Item
-
-                ShowText.Text = "Flevoland";
-                //Load data on textbox
-
-                //Eerste Argument is voor de column_naam, het tweede argument is voor Extended query die achter 'FROM tableName' komt
-                DataTable dt = gm1.Select("Flevoland", "*", misdrijf_filter);
-
-                int counter = 0;
-                string data = "";
-                foreach (DataRow row in dt.Rows)
-                {
-                    counter++;
-                    data = data + (counter + ". " + row[0] + " " + row[1] + "\r\n"); /// Appearance van de informatie..
-
-                }
-                DataShow.Text = data;
+            {       
+                //Load data on textbox           
+                data_format("Flevoland");
 
                 if (crimeCategoryBox.SelectedIndex == 0) //Totaal 
                 {
@@ -242,62 +213,31 @@ namespace Project3
                     crimeCategoryBox.SetItemChecked(1, false);
                     crimeCategoryBox.SetItemChecked(2, false);
 
-                    misdrijf_filter = "WHERE Soort_misdrijf LIKE 'Totaal%'";
-
-                    dt = gm1.Select("Flevoland", "*", misdrijf_filter);
-
-                    counter = 0;
-                    data = "";
-                    foreach (DataRow row in dt.Rows)
-                    {
-                        counter++;
-                        data = data + (counter + ". " + row[0] + " " + row[1] + "\r\n"); /// Appearance van de informatie..
-
-                    }
-
-                    DataShow.Text = data;
+                    data_format("Flevoland", "*", totaal_query);
 
                 }
-                //else
-                //{
-                //    //Unchecks Checked Item
-                //    //checkedListBox2.SetItemChecked(1, false);
-                //    //checkedListBox2.SetItemChecked(2, false);
+                if (crimeCategoryBox.SelectedIndex == 1)
+                {
+                    //Unchecks Checked Item
+                    crimeCategoryBox.SetItemChecked(0, false);
+                    crimeCategoryBox.SetItemChecked(2, false);
 
-                //    misdrijf_filter = "";
+                    data_format("Flevoland", "*", verniel_query);
+                }
+                if (crimeCategoryBox.SelectedIndex == 2)
+                {
+                    //Unchecks Checked Item
+                    crimeCategoryBox.SetItemChecked(0, false);
+                    crimeCategoryBox.SetItemChecked(1, false);
 
-                //    dt = gm1.Select("Flevoland", "*", misdrijf_filter);
-
-                //    counter = 0;
-                //    data = "";
-                //    foreach (DataRow row in dt.Rows)
-                //    {
-                //        counter++;
-                //        data = data + (counter + ". " + row[0] + " " + row[1] + "\r\n"); /// Appearance van de informatie..
-
-                //    }
-
-                //    DataShow.Text = data;
-                //}
+                    data_format("Flevoland", "*", drugs_query);
+                }
             }
 
             if (provinceBox.SelectedIndex == 1) //Drenthe
             {
-                //Load data on textbox
-
-                //Eerste Argument is voor de column_naam, het tweede argument is voor Extended query die achter 'FROM tableName' komt
-
-                DataTable dt = gm1.Select("Drenthe", "Jaar_2014, Jaar_2016", "WHERE Soort_misdrijf LIKE '%seksuele%'"); /// 1 argument
-
-                int counter = 0;
-                string data = "";
-                foreach (DataRow row in dt.Rows)
-                {
-                    counter++;
-                    data = data + (counter + ". " + row[0] + " " + row[1] + "\r\n"); /// Appearance van de informatie..
-
-                }
-                DataShow.Text = data;
+                //Load data on textbox 
+                data_format("Drenthe"); /// 1 argument
 
                 if (crimeCategoryBox.SelectedIndex == 0) //Totaal 
                 {
@@ -305,45 +245,59 @@ namespace Project3
                     crimeCategoryBox.SetItemChecked(1, false);
                     crimeCategoryBox.SetItemChecked(2, false);
 
-                    misdrijf_filter = "WHERE Soort_misdrijf LIKE 'Totaal%'";
-
-                    dt = gm1.Select("Drenthe", "*", misdrijf_filter);
-
-                    counter = 0;
-                    data = "";
-                    foreach (DataRow row in dt.Rows)
-                    {
-                        counter++;
-                        data = data + (counter + ". " + row[0] + " " + row[1] + "\r\n"); /// Appearance van de informatie..
-
-                    }
-
-                    DataShow.Text = data;
-
+                    data_format("Drenthe", "*", totaal_query);
                 }
-                else
+                if (crimeCategoryBox.SelectedIndex == 1)
                 {
                     //Unchecks Checked Item
-                    //checkedListBox2.SetItemChecked(1, false);
-                    //checkedListBox2.SetItemChecked(2, false);
+                    crimeCategoryBox.SetItemChecked(0, false);
+                    crimeCategoryBox.SetItemChecked(2, false);
 
-                    misdrijf_filter = "";
-
-                    dt = gm1.Select("Drenthe", "*", misdrijf_filter);
-
-                    counter = 0;
-                    data = "";
-                    foreach (DataRow row in dt.Rows)
-                    {
-                        counter++;
-                        data = data + (counter + ". " + row[0] + " " + row[1] + "\r\n"); /// Appearance van de informatie..
-
-                    }
-
-                    DataShow.Text = data;
+                    data_format("Drenthe", "*", verniel_query);
                 }
+                if (crimeCategoryBox.SelectedIndex == 2)
+                {
+                    //Unchecks Checked Item
+                    crimeCategoryBox.SetItemChecked(0, false);
+                    crimeCategoryBox.SetItemChecked(1, false);
+
+                    data_format("Drenthe", "*", drugs_query);
+                }
+
             }
-            
+            if (provinceBox.SelectedIndex == 2)//Groningen
+            {
+                //Load data on textbox 
+                data_format("Groningen"); /// 1 argument
+
+                if (crimeCategoryBox.SelectedIndex == 0) //Totaal 
+                {
+                    //Unchecks Checked Item
+                    crimeCategoryBox.SetItemChecked(1, false);
+                    crimeCategoryBox.SetItemChecked(2, false);
+
+                    data_format("Groningen", "*", totaal_query);
+                }
+                if (crimeCategoryBox.SelectedIndex == 1)
+                {
+                    //Unchecks Checked Item
+                    crimeCategoryBox.SetItemChecked(0, false);
+                    crimeCategoryBox.SetItemChecked(2, false);
+
+                    data_format("Groningen", "*", verniel_query);
+                }
+                if (crimeCategoryBox.SelectedIndex == 2)
+                {
+                    //Unchecks Checked Item
+                    crimeCategoryBox.SetItemChecked(0, false);
+                    crimeCategoryBox.SetItemChecked(1, false);
+
+                    data_format("Groningen", "*", drugs_query);
+                }
+
+
+            }
+
         }
 
         private void pictureBox1_Click_4(object sender, EventArgs e)
@@ -377,6 +331,26 @@ namespace Project3
         }
 
         private void comparisonLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        public void data_format(string province, string columnName = "*", string misdrijf_filter = "")
+        {
+            //Eerste Argument is voor de column_naam, het tweede argument is voor Extended query die achter 'FROM tableName' komt
+            DataTable dt = gm1.Select(province, columnName, misdrijf_filter);
+
+            int counter = 0;
+            string data = "";
+            foreach (DataRow row in dt.Rows)
+            {
+                counter++;
+                data = data + (counter + ". " + row[0] + " " + row[1] + "\r\n"); /// Appearance van de informatie..
+
+            }
+            DataShow.Text = data;
+        }
+        public void uncheck_items()
         {
 
         }

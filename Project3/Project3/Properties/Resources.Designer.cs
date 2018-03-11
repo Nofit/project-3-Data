@@ -73,9 +73,29 @@ namespace Project3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Drenthe_arced {
+            get {
+                object obj = ResourceManager.GetObject("Drenthe_arced", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Flevoland {
             get {
                 object obj = ResourceManager.GetObject("Flevoland", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Flevoland_arced {
+            get {
+                object obj = ResourceManager.GetObject("Flevoland_arced", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,6 +113,16 @@ namespace Project3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap full_map {
+            get {
+                object obj = ResourceManager.GetObject("full_map", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Gelderland {
             get {
                 object obj = ResourceManager.GetObject("Gelderland", resourceCulture);
@@ -103,9 +133,29 @@ namespace Project3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Gelderland_arced {
+            get {
+                object obj = ResourceManager.GetObject("Gelderland_arced", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Groningen {
             get {
                 object obj = ResourceManager.GetObject("Groningen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Groningen_arced {
+            get {
+                object obj = ResourceManager.GetObject("Groningen_arced", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

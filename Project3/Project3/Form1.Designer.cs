@@ -42,15 +42,15 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.DrentheButton = new System.Windows.Forms.Button();
             this.DataShow = new System.Windows.Forms.TextBox();
             this.provinceLable = new System.Windows.Forms.Label();
             this.crimeCatLabel = new System.Windows.Forms.Label();
             this.provinceBox = new System.Windows.Forms.CheckedListBox();
             this.crimeCategoryBox = new System.Windows.Forms.CheckedListBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.comparisonBox = new System.Windows.Forms.CheckedListBox();
             this.comparisonLabel = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.DrentheButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Jaarbalk)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -194,22 +194,6 @@
             this.label11.Text = "2015";
             this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
-            // DrentheButton
-            // 
-            this.DrentheButton.BackColor = System.Drawing.Color.Transparent;
-            this.DrentheButton.FlatAppearance.BorderSize = 0;
-            this.DrentheButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.DrentheButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.DrentheButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DrentheButton.ForeColor = System.Drawing.Color.White;
-            this.DrentheButton.Image = ((System.Drawing.Image)(resources.GetObject("DrentheButton.Image")));
-            this.DrentheButton.Location = new System.Drawing.Point(431, 116);
-            this.DrentheButton.Name = "DrentheButton";
-            this.DrentheButton.Size = new System.Drawing.Size(181, 183);
-            this.DrentheButton.TabIndex = 19;
-            this.DrentheButton.UseVisualStyleBackColor = false;
-            this.DrentheButton.Click += new System.EventHandler(this.DrentheButton_Click);
-            // 
             // DataShow
             // 
             this.DataShow.AcceptsReturn = true;
@@ -282,17 +266,6 @@
             this.crimeCategoryBox.Visible = false;
             this.crimeCategoryBox.SelectedIndexChanged += new System.EventHandler(this.checkedListBox2_SelectedIndexChanged);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Project3.Properties.Resources.Volle_kaart;
-            this.pictureBox1.Location = new System.Drawing.Point(38, 68);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(614, 741);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 37;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_4);
-            // 
             // comparisonBox
             // 
             this.comparisonBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
@@ -322,6 +295,33 @@
             this.comparisonLabel.Text = "Vergelijken met:";
             this.comparisonLabel.Visible = false;
             this.comparisonLabel.Click += new System.EventHandler(this.comparisonLabel_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Project3.Properties.Resources.full_map;
+            this.pictureBox1.Location = new System.Drawing.Point(38, 68);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(614, 741);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 37;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_4);
+            // 
+            // DrentheButton
+            // 
+            this.DrentheButton.BackColor = System.Drawing.Color.Transparent;
+            this.DrentheButton.FlatAppearance.BorderSize = 0;
+            this.DrentheButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.DrentheButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.DrentheButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DrentheButton.ForeColor = System.Drawing.Color.White;
+            this.DrentheButton.Image = ((System.Drawing.Image)(resources.GetObject("DrentheButton.Image")));
+            this.DrentheButton.Location = new System.Drawing.Point(431, 116);
+            this.DrentheButton.Name = "DrentheButton";
+            this.DrentheButton.Size = new System.Drawing.Size(181, 183);
+            this.DrentheButton.TabIndex = 19;
+            this.DrentheButton.UseVisualStyleBackColor = false;
+            this.DrentheButton.Click += new System.EventHandler(this.DrentheButton_Click);
             // 
             // Form1
             // 
