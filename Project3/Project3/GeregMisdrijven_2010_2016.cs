@@ -32,7 +32,7 @@ namespace Project3
         static string myconnstrng = ConfigurationManager.ConnectionStrings["connstrng"].ConnectionString;
 
         //Selecting data from database
-        public DataTable SelectDrenthe(string columnName = "*", string extquery = "")
+        public DataTable Select(string province, string columnName = "*", string extquery = "")
         {
             //Step 1 Database Connection
             SqlConnection conn = new SqlConnection(myconnstrng);
@@ -41,7 +41,7 @@ namespace Project3
             try
             {
                 //Step 2: Writing Sql Query
-                string sql = "SELECT " + columnName + " FROM DrentheTbl " + extquery + ";";
+                string sql = "SELECT " + columnName + " FROM " + province + "Tbl " + extquery + ";";
                 //Creating cmd using sql and conn
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 //Creating Sql Data adapter with cmd
@@ -61,96 +61,5 @@ namespace Project3
             }
             return dt;
         }
-        //Selecting data from database
-        public DataTable SelectGelderland(string columnName = "*", string extquery = "")
-        {
-            //Step 1 Database Connection
-            SqlConnection conn = new SqlConnection(myconnstrng);
-
-            DataTable dt = new DataTable();
-            try
-            {
-                //Step 2: Writing Sql Query
-                string sql = "SELECT " + columnName + " FROM GelderlandTbl " + extquery + ";";
-                //Creating cmd using sql and conn
-                SqlCommand cmd = new SqlCommand(sql, conn);
-                //Creating Sql Data adapter with cmd
-                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                conn.Open();
-                adapter.Fill(dt);
-
-            }
-            catch (Exception ex)
-            {
-
-            }
-            finally
-            {
-                conn.Close();
-
-            }
-            return dt;
-        }
-        //Selecting data from database
-        public DataTable SelectFlevoland(string columnName = "*", string extquery = "")
-        {
-            //Step 1 Database Connection
-            SqlConnection conn = new SqlConnection(myconnstrng);
-
-            DataTable dt = new DataTable();
-            try
-            {
-                //Step 2: Writing Sql Query
-                string sql = "SELECT " + columnName + " FROM FlevolandTbl " + extquery + ";";
-                //Creating cmd using sql and conn
-                SqlCommand cmd = new SqlCommand(sql, conn);
-                //Creating Sql Data adapter with cmd
-                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                conn.Open();
-                adapter.Fill(dt);
-
-            }
-            catch (Exception ex)
-            {
-
-            }
-            finally
-            {
-                conn.Close();
-
-            }
-            return dt;
-        }
-        //Selecting data from database
-        public DataTable SelectGroningen(string columnName = "*", string extquery = "")
-        {
-            //Step 1 Database Connection
-            SqlConnection conn = new SqlConnection(myconnstrng);
-
-            DataTable dt = new DataTable();
-            try
-            {
-                //Step 2: Writing Sql Query
-                string sql = "SELECT " + columnName + " FROM GroningenTbl " + extquery + ";";
-                //Creating cmd using sql and conn
-                SqlCommand cmd = new SqlCommand(sql, conn);
-                //Creating Sql Data adapter with cmd
-                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                conn.Open();
-                adapter.Fill(dt);
-
-            }
-            catch (Exception ex)
-            {
-
-            }
-            finally
-            {
-                conn.Close();
-
-            }
-            return dt;
-        }
-
     }
 }

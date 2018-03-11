@@ -92,7 +92,7 @@ namespace Project3
             //Load data on textbox
 
             //Eerste Argument is voor de column_naam, het tweede argument is voor Extended query die achter 'FROM tableName' komt
-            DataTable dt = gm1.SelectGelderland();
+            DataTable dt = gm1.Select("Gelderland");
 
             int counter = 0;
             string data = "";
@@ -157,64 +157,44 @@ namespace Project3
 
         private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (checkedListBox1.SelectedIndex == 0)
+            comparisonBox.Visible = true;
+            comparisonLabel.Visible = true;
+            crimeCategoryBox.Visible = true;
+            crimeCatLabel.Visible = true;
+
+            if (provinceBox.SelectedIndex == 0)
             {
-                checkedListBox1.SetItemChecked(1, false);
-                checkedListBox1.SetItemChecked(2, false);
+                provinceBox.SetItemChecked(1, false);
+                provinceBox.SetItemChecked(2, false);
 
-
-                /// Checks if Flevoland button is checked or not.. if so.. it changes the image, otherwise not.
-
-                FlevolandButton.Image = Project3.Properties.Resources.Volle_kaart;
+                ShowText.Text = "Flevoland";
             }
             else
             {
-                FlevolandButton.Image = Project3.Properties.Resources.Flevoland;
             }
 
-            if (checkedListBox1.SelectedIndex == 1)
+            if (provinceBox.SelectedIndex == 1)
             {
                 ///checkedListBox1.SetItemCheckState(0, uncheck1);
-                checkedListBox1.SetItemChecked(0, false);
-                checkedListBox1.SetItemChecked(2, false);        
+                provinceBox.SetItemChecked(0, false);
+                provinceBox.SetItemChecked(2, false);        
 
                 ShowText.Text = "Drenthe";
-                //Load data on textbox
-
-                //Eerste Argument is voor de column_naam, het tweede argument is voor Extended query die achter 'FROM tableName' komt
-
-                DataTable dt = gm1.SelectDrenthe("Jaar_2014, Jaar_2016", "WHERE Soort_misdrijf LIKE '%seksuele%'"); /// 1 argument
-
-                int counter = 0;
-                string data = "";
-                foreach (DataRow row in dt.Rows)
-                {
-                    counter++;
-                    data = data + (counter + ". " + row[0] + " " + row[1] + "\r\n"); /// Appearance van de informatie..
-
-                }
-                DataShow.Text = data;
-
-                DrentheButton.Image = Project3.Properties.Resources.Volle_kaart;
-            }
-            else
-            {
-                DrentheButton.Image = Project3.Properties.Resources.Drenthe;
-                
+ 
             }
 
-            if (checkedListBox1.SelectedIndex == 2)
+            if (provinceBox.SelectedIndex == 2)
             {
                 ///checkedListBox1.SetItemCheckState(0, uncheck1);
-                checkedListBox1.SetItemChecked(0, false);
-                checkedListBox1.SetItemChecked(1, false);
+                provinceBox.SetItemChecked(0, false);
+                provinceBox.SetItemChecked(1, false);
 
 
                 ShowText.Text = "Groningen";
                 //Load data on textbox
 
                 //Eerste Argument is voor de column_naam, het tweede argument is voor Extended query die achter 'FROM tableName' komt
-                DataTable dt = gm1.SelectGroningen();
+                DataTable dt = gm1.Select("Groningen");
 
                 int counter = 0;
                 string data = "";
@@ -225,12 +205,9 @@ namespace Project3
 
                 }
                 DataShow.Text = data;
-
-                GroningenButton.Image = Project3.Properties.Resources.Volle_kaart;
             }
             else
             {
-                GroningenButton.Image = Project3.Properties.Resources.Groningen;
             }
 
         }
@@ -239,7 +216,7 @@ namespace Project3
         {
             string misdrijf_filter = "";
 
-            if (checkedListBox1.SelectedIndex == 0) //Flevoland
+            if (provinceBox.SelectedIndex == 0) //Flevoland
             {
                 //Unchecks Checked Item
 
@@ -247,7 +224,7 @@ namespace Project3
                 //Load data on textbox
 
                 //Eerste Argument is voor de column_naam, het tweede argument is voor Extended query die achter 'FROM tableName' komt
-                DataTable dt = gm1.SelectFlevoland("*", misdrijf_filter);
+                DataTable dt = gm1.Select("Flevoland", "*", misdrijf_filter);
 
                 int counter = 0;
                 string data = "";
@@ -259,15 +236,78 @@ namespace Project3
                 }
                 DataShow.Text = data;
 
-                if (checkedListBox2.GetItemChecked(0)) //Totaal 
+                if (crimeCategoryBox.SelectedIndex == 0) //Totaal 
                 {
                     //Unchecks Checked Item
-                    checkedListBox2.SetItemChecked(1, false);
-                    checkedListBox2.SetItemChecked(2, false);
+                    crimeCategoryBox.SetItemChecked(1, false);
+                    crimeCategoryBox.SetItemChecked(2, false);
 
                     misdrijf_filter = "WHERE Soort_misdrijf LIKE 'Totaal%'";
 
-                    dt = gm1.SelectFlevoland("*", misdrijf_filter);
+                    dt = gm1.Select("Flevoland", "*", misdrijf_filter);
+
+                    counter = 0;
+                    data = "";
+                    foreach (DataRow row in dt.Rows)
+                    {
+                        counter++;
+                        data = data + (counter + ". " + row[0] + " " + row[1] + "\r\n"); /// Appearance van de informatie..
+
+                    }
+
+                    DataShow.Text = data;
+
+                }
+                //else
+                //{
+                //    //Unchecks Checked Item
+                //    //checkedListBox2.SetItemChecked(1, false);
+                //    //checkedListBox2.SetItemChecked(2, false);
+
+                //    misdrijf_filter = "";
+
+                //    dt = gm1.Select("Flevoland", "*", misdrijf_filter);
+
+                //    counter = 0;
+                //    data = "";
+                //    foreach (DataRow row in dt.Rows)
+                //    {
+                //        counter++;
+                //        data = data + (counter + ". " + row[0] + " " + row[1] + "\r\n"); /// Appearance van de informatie..
+
+                //    }
+
+                //    DataShow.Text = data;
+                //}
+            }
+
+            if (provinceBox.SelectedIndex == 1) //Drenthe
+            {
+                //Load data on textbox
+
+                //Eerste Argument is voor de column_naam, het tweede argument is voor Extended query die achter 'FROM tableName' komt
+
+                DataTable dt = gm1.Select("Drenthe", "Jaar_2014, Jaar_2016", "WHERE Soort_misdrijf LIKE '%seksuele%'"); /// 1 argument
+
+                int counter = 0;
+                string data = "";
+                foreach (DataRow row in dt.Rows)
+                {
+                    counter++;
+                    data = data + (counter + ". " + row[0] + " " + row[1] + "\r\n"); /// Appearance van de informatie..
+
+                }
+                DataShow.Text = data;
+
+                if (crimeCategoryBox.SelectedIndex == 0) //Totaal 
+                {
+                    //Unchecks Checked Item
+                    crimeCategoryBox.SetItemChecked(1, false);
+                    crimeCategoryBox.SetItemChecked(2, false);
+
+                    misdrijf_filter = "WHERE Soort_misdrijf LIKE 'Totaal%'";
+
+                    dt = gm1.Select("Drenthe", "*", misdrijf_filter);
 
                     counter = 0;
                     data = "";
@@ -289,7 +329,7 @@ namespace Project3
 
                     misdrijf_filter = "";
 
-                    dt = gm1.SelectFlevoland("*", misdrijf_filter);
+                    dt = gm1.Select("Drenthe", "*", misdrijf_filter);
 
                     counter = 0;
                     data = "";
@@ -303,7 +343,7 @@ namespace Project3
                     DataShow.Text = data;
                 }
             }
-
+            
         }
 
         private void pictureBox1_Click_4(object sender, EventArgs e)
@@ -327,6 +367,16 @@ namespace Project3
         }
 
         private void radioButton6_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comparisonBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comparisonLabel_Click(object sender, EventArgs e)
         {
 
         }
