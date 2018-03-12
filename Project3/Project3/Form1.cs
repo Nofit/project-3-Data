@@ -97,16 +97,6 @@ namespace Project3
 
         }
 
-        private void chart1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void DrentheButton_Click(object sender, EventArgs e)
         {
 
