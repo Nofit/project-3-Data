@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.Jaarbalk = new System.Windows.Forms.TrackBar();
             this.ShowText = new System.Windows.Forms.TextBox();
@@ -51,8 +52,11 @@
             this.comparisonLabel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.DrentheButton = new System.Windows.Forms.Button();
+            this.listBoxArray1 = new Microsoft.VisualBasic.Compatibility.VB6.ListBoxArray(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Jaarbalk)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listBoxArray1)).BeginInit();
             this.SuspendLayout();
             // 
             // Jaarbalk
@@ -323,6 +327,16 @@
             this.DrentheButton.UseVisualStyleBackColor = false;
             this.DrentheButton.Click += new System.EventHandler(this.DrentheButton_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(1107, 116);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 52;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_2);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -330,6 +344,7 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(240)))));
             this.ClientSize = new System.Drawing.Size(1364, 934);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.comparisonLabel);
             this.Controls.Add(this.comparisonBox);
             this.Controls.Add(this.ShowText);
@@ -357,6 +372,7 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Jaarbalk)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listBoxArray1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -385,6 +401,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.CheckedListBox comparisonBox;
         private System.Windows.Forms.Label comparisonLabel;
+        private Microsoft.VisualBasic.Compatibility.VB6.ListBoxArray listBoxArray1;
+        private System.Windows.Forms.Button button1;
     }
 }
 
