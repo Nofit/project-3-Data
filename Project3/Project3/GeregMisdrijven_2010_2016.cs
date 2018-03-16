@@ -32,7 +32,7 @@ namespace Project3
         static string myconnstrng = ConfigurationManager.ConnectionStrings["connstrng"].ConnectionString;
 
         //Selecting data from database
-        public DataTable Select(string province, string columnName, string extquery)
+        public DataTable Select(string province, string extquery)
         {
             //Step 1 Database Connection
             SqlConnection conn = new SqlConnection(myconnstrng);
@@ -41,7 +41,7 @@ namespace Project3
             try
             {
                 //Step 2: Writing Sql Query
-                string sql = "SELECT " + columnName + " FROM " + province + "Tbl " + extquery + ";";
+                string sql = "SELECT * FROM " + province + "Tbl " + extquery + ";";
                 //Creating cmd using sql and conn
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 //Creating Sql Data adapter with cmd

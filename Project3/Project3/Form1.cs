@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -61,31 +62,6 @@ namespace Project3
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click_1(object sender, EventArgs e)
         {
             ShowText.Text = "Kaart van Nederland";
@@ -97,21 +73,6 @@ namespace Project3
             //Load data on textbox
             data_format("Gelderland");
 
-        }
-
-        private void DrentheButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void FlevolandButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void GroningenButton_Click(object sender, EventArgs e)
-        {
- 
         }
 
         private void textBox1_TextChanged_2(object sender, EventArgs e)
@@ -141,199 +102,41 @@ namespace Project3
 
         private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            CheckLastprovince();
-            comparisonBox.Visible = true;
-            comparisonLabel.Visible = true;
             crimeCategoryBox.Visible = true;
-            crimeCatLabel.Visible = true;
-
-            //if (AllUnchecked(provinceBox.GetItemChecked(0), provinceBox.GetItemChecked(1), provinceBox.GetItemChecked(2)))
-            //{
-            //    DataShow.Text = "";
-            //    pictureBox1.Image = Project3.Properties.Resources.full_map;
-            //    counter = 0;
-            //}
-
-            if (provinceBox.SelectedIndex == 0)
+            crimeCatLabel.Visible = true;         
+            try
             {
-                if (provinceBox.GetItemChecked(0))
+                if (provinceBox.SelectedIndex == 0)
                 {
-                    ShowText.Text = "Flevoland";
-                    crimeCategoryBox.SetSelected(0, true);
-                    crimeCategoryBox.SetItemChecked(0, true);
-
-                    if (counter < 2)
-                    {
-                        counter++;
-                    }
-                    orderedList.Add("Flevoland");
-                    province_map();
-
-                    Console.WriteLine(orderedList[counter].ToString());
-                    Console.WriteLine(counter.ToString());
+                    set_settings_province(0, "Flevoland");
                 }
-                else if (provinceBox.GetItemChecked(0) == false)
+                if (provinceBox.SelectedIndex == 1)
                 {
-                    try
-                    {
-                        orderedList.RemoveAt(orderedList.IndexOf("Flevoland"));
-                        counter--;
-                        province_map();
-                        if (counter >= 0)
-                        {
-                            Console.WriteLine(orderedList[counter].ToString());
-                        }
-                        Console.WriteLine(counter.ToString());
-                    }
-                    catch(Exception ex)
-                    {
-                        Console.WriteLine("Error!");
-                    }
+                    set_settings_province(1, "Drenthe");
+                }
+                if (provinceBox.SelectedIndex == 2)
+                {
+                    set_settings_province(2, "Groningen");
                 }
             }
-
-            if (provinceBox.SelectedIndex == 1)
-            {     
-                if (provinceBox.GetItemChecked(1))
-                {
-                    ShowText.Text = "Drenthe";
-                    crimeCategoryBox.SetSelected(0, true);
-                    crimeCategoryBox.SetItemChecked(0, true);
-
-                    if (counter < 2)
-                    {
-                        counter++;
-                    }
-                    orderedList.Add("Drenthe");
-                    province_map();
-
-                    Console.WriteLine(orderedList[counter].ToString());
-                    Console.WriteLine(counter.ToString());
-                }
-                else if (provinceBox.GetItemChecked(1) == false)
-                {
-                    try
-                    {
-                        orderedList.RemoveAt(orderedList.IndexOf("Drenthe"));
-                        counter--;
-                        province_map();
-                        if (counter >= 0)
-                        {
-                            Console.WriteLine(orderedList[counter].ToString()); ;
-                        }
-                        Console.WriteLine(counter.ToString());
-                    }
-
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine("Error!");
-                    }
-                }
-            }
-            if (provinceBox.SelectedIndex == 2)
+            catch (Exception ex)
             {
-                if (provinceBox.GetItemChecked(2))
-                {
-                    ShowText.Text = "Groningen";
-                    crimeCategoryBox.SetSelected(0, true);
-                    crimeCategoryBox.SetItemChecked(0, true);
-
-                    if (counter < 2)
-                    {
-                        counter++;
-                    }
-                    orderedList.Add("Groningen");
-                    province_map();
-
-                    Console.WriteLine(orderedList[counter].ToString());
-                    Console.WriteLine(counter.ToString());
-                }
-                else if (provinceBox.GetItemChecked(2) == false)
-                {
-                    try
-                    {
-                        orderedList.RemoveAt(orderedList.IndexOf("Groningen"));
-                        counter--;
-                        province_map();
-                        if (counter >= 0)
-                        {
-                            Console.WriteLine(orderedList[counter].ToString());
-                        }
-                        Console.WriteLine(counter.ToString());
-                    }
-                    catch(Exception ex)
-                    {
-                        Console.WriteLine("Error!");
-                    }
- 
-                }
-
+                System.Windows.Forms.MessageBox.Show("Please refrain from spamming the program.");
+                counter = -1;
+                provinceBox.SetItemChecked(0, false);
+                provinceBox.SetItemChecked(1, false);
+                provinceBox.SetItemChecked(2, false);
+                orderedList.Clear();
             }
-            //Load data on textbox           
-            // data_format(last_province);
-
-            if (crimeCategoryBox.SelectedIndex == 0) //Totaal 
-            {
-                //Unchecks Checked Item
-                crimeCategoryBox.SetItemChecked(1, false);
-                crimeCategoryBox.SetItemChecked(2, false);
-                
-                data_format(CheckLastprovince(), "*", totaal_query);
-                province_map();      
-                  
-            }
-            if (crimeCategoryBox.SelectedIndex == 1)
-            {
-                //Unchecks Checked Item
-                crimeCategoryBox.SetItemChecked(0, false);
-                crimeCategoryBox.SetItemChecked(2, false);
-
-                data_format(CheckLastprovince(), "*", verniel_query);
-                province_map();
-            }
-            if (crimeCategoryBox.SelectedIndex == 2)
-            {
-                //Unchecks Checked Item
-                crimeCategoryBox.SetItemChecked(0, false);
-                crimeCategoryBox.SetItemChecked(1, false);
-
-                data_format(CheckLastprovince(), "*", drugs_query);
-                province_map();
-            }
+            set_data_and_map(); //references to the function.. what shows data on screen and changes map to corresponding province
         }
 
         private void checkedListBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //Load data on textbox           
-            // data_format(last_province);
-
-            if (crimeCategoryBox.SelectedIndex == 0) //Totaal 
+            set_data_and_map(); //references to the function.. what shows data on screen and changes map to corresponding province
+            if(provinceBox.GetItemChecked(0) == false & provinceBox.GetItemChecked(1) == false & provinceBox.GetItemChecked(2) == false)
             {
-                //Unchecks Checked Item
-                crimeCategoryBox.SetItemChecked(1, false);
-                crimeCategoryBox.SetItemChecked(2, false);
-
-                data_format(CheckLastprovince(), "*", totaal_query);
-                province_map();
-
-            }
-            if (crimeCategoryBox.SelectedIndex == 1)
-            {
-                //Unchecks Checked Item
-                crimeCategoryBox.SetItemChecked(0, false);
-                crimeCategoryBox.SetItemChecked(2, false);
-
-                data_format(CheckLastprovince(), "*", verniel_query);
-                province_map();
-            }
-            if (crimeCategoryBox.SelectedIndex == 2)
-            {
-                //Unchecks Checked Item
-                crimeCategoryBox.SetItemChecked(0, false);
-                crimeCategoryBox.SetItemChecked(1, false);
-
-                data_format(CheckLastprovince(), "*", drugs_query);
-                province_map();
+                System.Windows.Forms.MessageBox.Show("Select a province first!");
             }
         }
 
@@ -342,104 +145,133 @@ namespace Project3
 
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        private void data_format(string province, string misdrijf_filter = "") //This function formats the data obtained from database into the texbox
         {
+            //First argument is for the province name, second argument is for the columnname
+            //third argument is for the Extended query which follows after 'FROM tableName'
+            DataTable dt = gm1.Select(province, misdrijf_filter); //returns Table according to Query .. gm1 is name of object
 
-        }
+            string data = "";//Empty string for creating the text with data
 
-        private void radioButton12_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton5_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton6_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comparisonBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comparisonLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        public void data_format(string province, string columnName = "*", string misdrijf_filter = "")
-        {
-            //Eerste Argument is voor de column_naam, het tweede argument is voor Extended query die achter 'FROM tableName' komt
-            DataTable dt = gm1.Select(province, columnName, misdrijf_filter);
-
-            int counter = 0;
-            string data = "";
-            foreach (DataRow row in dt.Rows)
+            foreach (DataRow row in dt.Rows) //Counts the rows from the Table
             {
-                counter++;
-                data = data + (counter + ". " + row[0] + " " + row[1] + "\r\n"); /// Appearance van de informatie..
-
+                data = data + (row[0] + " " + row[1] + "\r\n"); // Connects rows with each to make suitable to print
+                //row[0] and row[1] indicate which columns of a row you want to select
             }
             DataShow.Text = data;
         }
-        public void uncheck_items()
-        {
 
-        }
-        public Boolean AllUnchecked(Boolean flevo, Boolean drenthe, Boolean groningen)
-        {
-            Boolean check = false;
-            if (!(flevo && drenthe && groningen)){
-                check = true;
-            }
-            return check;
-        }
-
-        private void button1_Click_2(object sender, EventArgs e)
+        private void button1_Click_2(object sender, EventArgs e) //This button sums up all the items in orderedList
         {
             foreach(string s in orderedList)
             {
                 Console.WriteLine(s);
             }
+            System.Windows.Forms.MessageBox.Show("Check your Output tab.");
         }
         
-        public string CheckLastprovince()
+        private string CheckLastprovince() //This function checks what the last checked province and returns it, when counter -1, means list is empty therefore nothing is selected.
         {
-            if (counter >= 0)
+            if (counter >= 0) //list is not empty has 1 or more items in it.. ans so returns the last checked province
             {
                 last_province = orderedList[counter];
             }
             else
             {
-                last_province = "";
+                last_province = ""; //empty list... cause counter < 0 ... so there will be no data shown..
             }
             return last_province;
         }
 
-        public void province_map()
+        private void province_map() //This function places the corresponding image with the last checked province
         {
-            if (CheckLastprovince() == "Flevoland")
+            if (CheckLastprovince() == "Flevoland") //Checks if the last selected province corresponds with 'Flevoland'
             {
-                pictureBox1.Image = Properties.Resources.Flevoland_arced;
+                pictureBox1.Image = Properties.Resources.Flevoland_arced; //sets the picture with Flevoland arced.
             }
             else if (CheckLastprovince() == "Drenthe")
             {
-                pictureBox1.Image = Properties.Resources.Drenthe_arced;
+                pictureBox1.Image = Properties.Resources.Drenthe_arced; //sets the picture with Drenthe arced.
             }
             else if (CheckLastprovince() == "Groningen")
             {
-                pictureBox1.Image = Properties.Resources.Groningen_arced;
+                pictureBox1.Image = Properties.Resources.Groningen_arced; //sets the picture with Groningen arced.
             }
             else
             {
-                pictureBox1.Image = Properties.Resources.full_map;
+                pictureBox1.Image = Properties.Resources.full_map; //When there is nothing checked in the checkboxlist.. set the full map with nothing arced.
             }
         }
-            
+        private void set_settings_province(int index_num, string province) 
+            //This function wraps up and sets the settings for the last checked province.
+        {
+            if (provinceBox.GetItemChecked(index_num)) //checks if checked at the given index
+            {
+                ShowText.Text = province; //Shows text of the last checked province
+
+                crimeCategoryBox.SetSelected(0, true); //Sets automatically selection at misdrijven Totaal filter
+                crimeCategoryBox.SetItemChecked(0, true); //Sets automatically check at misdrijven Totaal filter
+
+                if (counter < 2) //Counts up only till 2 ... 2 indicates the number of indexes in the checkboxlist and so the number of indexes allowed in the orderedlist 
+                {
+                    counter++;
+                }
+                orderedList.Add(province); //Adds last checked province into the list
+                province_map(); //Function that changes the map according to the last checked province
+
+                Console.WriteLine(orderedList[counter].ToString()); //Test which provinces are currently in the list.. in the order the user ticked the boxes.
+                Console.WriteLine(counter.ToString()); //Test ..keeps track of the index a province is placed in the orderedList
+            }
+            else if (provinceBox.GetItemChecked(index_num) == false) //checks if unchecked at the given index
+            {
+                orderedList.RemoveAt(orderedList.IndexOf(province)); //removes a province from the orderedList at the last index of the list
+                counter--; //then reduces the count..
+
+                province_map(); //Function that changes the map according to the last checked province
+
+                if (counter >= 0) //For preventing IndexOutofRange errors.. cause cannot accept a index with a counter of -1
+                {
+                    Console.WriteLine(orderedList[counter].ToString());
+                }
+                Console.WriteLine(counter.ToString());
+            }
+        }
+        private void set_data_and_map() 
+            //This functions shows data in the screen and changes the map according to the last selected province.. 
+            //It also unchecks other crime category checks, cause only one check at a time for the crimecategorybox is allowed.
+        {
+            if (crimeCategoryBox.SelectedIndex == 0) //Misdrijven Totaal 
+            {
+                //Unchecks Checked Item
+                crimeCategoryBox.SetItemChecked(1, false);
+                crimeCategoryBox.SetItemChecked(2, false);
+                data_format(CheckLastprovince(), totaal_query); //This function processes the last selected province, column, 
+                //and extended query into a query.. which then retrieves data from database and prints the data into textbox
+                //In this case the totaal_query gets processed
+
+                province_map(); //Function that changes the map according to the last checked province
+            }
+            if (crimeCategoryBox.SelectedIndex == 1) //Vernielingen 
+            {
+                //Unchecks Checked Item
+                crimeCategoryBox.SetItemChecked(0, false);
+                crimeCategoryBox.SetItemChecked(2, false);
+                data_format(CheckLastprovince(), verniel_query); //references the verniel_query
+                province_map(); //Function that changes the map according to the last checked province
+            }
+            if (crimeCategoryBox.SelectedIndex == 2) //Drugsmisdrijven
+            {
+                //Unchecks Checked Item
+                crimeCategoryBox.SetItemChecked(0, false);
+                crimeCategoryBox.SetItemChecked(1, false);
+                data_format(CheckLastprovince(), drugs_query); //references the drugs_query
+                province_map(); //Function that changes the map according to the last checked province
+            }
+        }
+
+        private void label12_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
