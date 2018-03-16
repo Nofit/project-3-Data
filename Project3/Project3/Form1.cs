@@ -128,12 +128,12 @@ namespace Project3
                 provinceBox.SetItemChecked(2, false);
                 orderedList.Clear();
             }
-            set_data_and_map(CheckLastprovince()); //references to the function.. what shows data on screen and changes map to corresponding province
+            set_data_and_map(); //references to the function.. what shows data on screen and changes map to corresponding province
         }
 
         private void checkedListBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            set_data_and_map(CheckLastprovince()); //references to the function.. what shows data on screen and changes map to corresponding province
+            set_data_and_map(); //references to the function.. what shows data on screen and changes map to corresponding province
             if(provinceBox.GetItemChecked(0) == false & provinceBox.GetItemChecked(1) == false & provinceBox.GetItemChecked(2) == false)
             {
                 System.Windows.Forms.MessageBox.Show("Select a province first!");
@@ -236,26 +236,23 @@ namespace Project3
                 Console.WriteLine(counter.ToString());
             }
         }
-        private void set_data_and_map(string province) 
+        private void set_data_and_map() 
             //This functions shows data in the screen and changes the map according to the last selected province.. 
             //It also unchecks other crime category checks, cause only one check at a time for the crimecategorybox is allowed.
         {
             if (crimeCategoryBox.SelectedIndex == 0) //Misdrijven Totaal 
             {
-                ShowText.Text = province; //Shows text of the last checked province
-
                 //Unchecks Checked Item
                 crimeCategoryBox.SetItemChecked(1, false);
                 crimeCategoryBox.SetItemChecked(2, false);
                 data_format(CheckLastprovince(), totaal_query); //This function processes the last selected province, column, 
                 //and extended query into a query.. which then retrieves data from database and prints the data into textbox
                 //In this case the totaal_query gets processed
+
                 province_map(); //Function that changes the map according to the last checked province
             }
             if (crimeCategoryBox.SelectedIndex == 1) //Vernielingen 
             {
-                ShowText.Text = province; //Shows text of the last checked province
-
                 //Unchecks Checked Item
                 crimeCategoryBox.SetItemChecked(0, false);
                 crimeCategoryBox.SetItemChecked(2, false);
@@ -264,8 +261,6 @@ namespace Project3
             }
             if (crimeCategoryBox.SelectedIndex == 2) //Drugsmisdrijven
             {
-                ShowText.Text = province; //Shows text of the last checked province
-
                 //Unchecks Checked Item
                 crimeCategoryBox.SetItemChecked(0, false);
                 crimeCategoryBox.SetItemChecked(1, false);
