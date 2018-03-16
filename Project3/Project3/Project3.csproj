@@ -69,18 +69,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -91,57 +91,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\nederland.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\losseprovincies\Drenthe.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\losseprovincies\Flevoland.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\losseprovincies\Friesland.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\losseprovincies\Gelderland.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\losseprovincies\Groningen.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\losseprovincies\Limburg.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\losseprovincies\Noord Brabant.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\losseprovincies\Noord Holland.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\losseprovincies\Overijssel.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\losseprovincies\Utrecht.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\losseprovincies\Volle kaart.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\losseprovincies\Zeeland.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\losseprovincies\Zuid Holland.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Images\Drenthe_arced.png" />
-    <Content Include="Images\Flevoland_arced.png" />
-    <Content Include="Images\Gelderland_arced.png" />
-    <Content Include="Images\Groningen_arced.png" />
-    <None Include="Resources\full_map.png" />
     <None Include="Resources\Groningen_arced.png" />
     <None Include="Resources\Gelderland_arced.png" />
+    <None Include="Resources\full_map.png" />
     <None Include="Resources\Flevoland_arced.png" />
     <None Include="Resources\Drenthe_arced.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
