@@ -19,12 +19,15 @@ namespace Project3
         }
 
         GeregMisdrijven_2010_2016 gm1 = new GeregMisdrijven_2010_2016();
-        string totaal_query = "WHERE Soort_misdrijf LIKE 'Totaal%'";
-        string verniel_query = "WHERE Soort_misdrijf LIKE 'Vernielingen'";
-        string drugs_query = "WHERE Soort_misdrijf LIKE 'Drug%'";
+        string totaal_query = "WHERE soort_misdrijf LIKE '%totaal%'";
+        string verniel_query = "WHERE soort_misdrijf LIKE '%Vernielingen%'";
+        string drugs_query = "WHERE soort_misdrijf LIKE '%drug%'";
         int counter = -1;
         List<string> orderedList = new List<string>(new string[] {});
         string last_province = "";
+        int trackbar_index = 0;
+        bool showprovincetext = false;
+        string checked_items = ""; 
 
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -34,7 +37,8 @@ namespace Project3
 
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
-
+            trackbar_index = Jaarbalk.Value;
+            set_data_and_map(CheckLastprovince()); //references to the function.. what shows data on screen and changes map to corresponding province
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -106,7 +110,7 @@ namespace Project3
             crimeCatLabel.Visible = true;         
             try
             {
-                if (provinceBox.SelectedIndex == 0)
+                if (provinceBox.SelectedIndex == 0)//flevoland
                 {
                     set_settings_province(0, "Flevoland");
                 }
@@ -153,20 +157,54 @@ namespace Project3
 
             string data = "";//Empty string for creating the text with data
 
+
             foreach (DataRow row in dt.Rows) //Counts the rows from the Table
             {
-                data = data + (row[0] + " " + row[1] + "\r\n"); // Connects rows with each to make suitable to print
+                data = data + (row[0] + " " + row[trackbar_index + 1] + "\r\n"); // Connects rows with each to make suitable to print
                 //row[0] and row[1] indicate which columns of a row you want to select
             }
             DataShow.Text = data;
+            Console.WriteLine("Hier is:" + data);
         }
 
         private void button1_Click_2(object sender, EventArgs e) //This button sums up all the items in orderedList
         {
-            foreach(string s in orderedList)
+            foreach (string s in orderedList)
             {
+                if (s == "Flevoland")
+                {
+                    bxFlevoland.Visible = true;
+                }
+                else
+                {
+                    bxFlevoland.Visible = false;
+                }
+            }
+            foreach (string s in orderedList)
+            {
+                if (s == "Drenthe")
+                {
+                    bxFlevoland.Visible = true;
+                }
+                else
+                {
+                    bxFlevoland.Visible = false;
+                }
+            }
+
+            foreach (string s in orderedList)
+            {
+                if (s == "Groningen")
+                {
+                    bxFlevoland.Visible = true;
+                }
+                else
+                {
+                    bxFlevoland.Visible = false;
+                }
                 Console.WriteLine(s);
             }
+          
             System.Windows.Forms.MessageBox.Show("Check your Output tab.");
         }
         
@@ -216,7 +254,25 @@ namespace Project3
                 {
                     counter++;
                 }
+
                 orderedList.Add(province); //Adds last checked province into the list
+
+                checked_items = provinceBox.CheckedItems[counter].ToString();
+
+                Console.WriteLine(checked_items);
+                if (checked_items.Contains("Flevoland"))
+                {
+                    bxFlevoland.Visible = true;
+                }
+                if (checked_items.Contains("Drenthe"))
+                {
+                    bxFlevoland.Visible = true;
+                }
+                if (checked_items.Contains("Groningen"))
+                {
+                    bxFlevoland.Visible = true;
+                }
+
                 province_map(); //Function that changes the map according to the last checked province
 
                 Console.WriteLine(orderedList[counter].ToString()); //Test which provinces are currently in the list.. in the order the user ticked the boxes.
@@ -224,6 +280,18 @@ namespace Project3
             }
             else if (provinceBox.GetItemChecked(index_num) == false) //checks if unchecked at the given index
             {
+                if (checked_items.Contains("Flevoland") == false)
+                {
+                    bxFlevoland.Visible = false;
+                }
+                if (checked_items.Contains("Drenthe"))
+                {
+                    bxFlevoland.Visible = false;
+                }
+                if (checked_items.Contains("Groningen"))
+                {
+                    bxFlevoland.Visible = false;
+                }
                 orderedList.RemoveAt(orderedList.IndexOf(province)); //removes a province from the orderedList at the last index of the list
                 counter--; //then reduces the count..
 
@@ -277,6 +345,18 @@ namespace Project3
         private void label12_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void halloToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void check_checked_boxes()
+        {
+            foreach (string s in orderedList)
+            {
+
+            }
         }
     }
 }

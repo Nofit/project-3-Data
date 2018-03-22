@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,26 +14,26 @@ namespace Project3
     {
         //getter and setter properties
         //Acts as data carrier in our application
-        public string SoortMisdrijf { get; set; }
+        public string soort_misdrijf { get; set; }
 
-        public int Jaar2010 { get; set; }
+        public int jaar_2010 { get; set; }
 
-        public int Jaar2011 { get; set; }
+        public int jaar_2011 { get; set; }
 
-        public int Jaar2012 { get; set; }
+        public int jaar_2012 { get; set; }
 
-        public int Jaar2013 { get; set; }
+        public int jaar_2013 { get; set; }
 
-        public int Jaar2014 { get; set; }
+        public int jaar_2014 { get; set; }
 
-        public int Jaar2015 { get; set; }
+        public int jaar_2015 { get; set; }
 
-        public int Jaar2016 { get; set; }
+        public int jaar_2016 { get; set; }
 
         static string myconnstrng = ConfigurationManager.ConnectionStrings["connstrng"].ConnectionString;
 
         //Selecting data from database
-        public DataTable Select(string province, string extquery)
+        public DataTable Select(string province, string extquery = "")
         {
             //Step 1 Database Connection
             SqlConnection conn = new SqlConnection(myconnstrng);
@@ -40,19 +41,24 @@ namespace Project3
             DataTable dt = new DataTable();
             try
             {
+
+                province = province.ToLower();
+                Console.WriteLine(province);
                 //Step 2: Writing Sql Query
-                string sql = "SELECT * FROM " + province + "Tbl " + extquery + ";";
+                string sql = "SELECT * FROM misdrijf_" + province + " " + extquery + ";";
                 //Creating cmd using sql and conn
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 //Creating Sql Data adapter with cmd
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                conn.Open();
-                adapter.Fill(dt);
 
+                conn.Open();
+                Console.WriteLine("Data connectie werkt.");
+                adapter.Fill(dt);
+ 
             }
             catch (Exception ex)
             {
-
+                Console.WriteLine("Data connectie werkt niet.");
             }
             finally
             {
