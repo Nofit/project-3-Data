@@ -160,7 +160,7 @@ namespace Project3
             //First argument is for the province name, second argument is for the columnname
             //third argument is for the Extended query which follows after 'FROM tableName'
             DataTable dt = gm1.Select(province, misdrijf_filter); //returns Table according to Query .. gm1 is name of object
-            DataTable bt = gm1.Select_bevolking(misdrijf_filter);
+            DataTable bt = gm1.Select_bevolking(province);
             string data = "";//Empty string for creating the text with data
             string bdata = "";
             int aantalmisdaden = 0;
@@ -229,6 +229,35 @@ namespace Project3
             {
                 ShowText.Text = province; //Shows text of the last checked province
 
+                //if(trackbar_index == 0)
+                //{
+                //    chosenYearbx.Text = "2010";
+                //}
+                //if (trackbar_index == 1)
+                //{
+                //    chosenYearbx.Text = "2011";
+                //}
+                //if (trackbar_index == 2)
+                //{
+                //    chosenYearbx.Text = "2012";
+                //}
+                //if (trackbar_index == 3)
+                //{
+                //    chosenYearbx.Text = "2013";
+                //}
+                //if (trackbar_index == 4)
+                //{
+                //    chosenYearbx.Text = "2014";
+                //}
+                //if (trackbar_index == 5)
+                //{
+                //    chosenYearbx.Text = "2015";
+                //}
+                //if (trackbar_index == 6)
+                //{
+                //    chosenYearbx.Text = "2016";
+                //}
+
                 crimeCategoryBox.SetSelected(0, true); //Sets automatically selection at misdrijven Totaal filter
                 crimeCategoryBox.SetItemChecked(0, true); //Sets automatically check at misdrijven Totaal filter
 
@@ -294,7 +323,7 @@ namespace Project3
             if (crimeCategoryBox.SelectedIndex == 0) //Misdrijven Totaal 
             {
                 ShowText.Text = province; //Shows text of the last checked province
-
+                chosenMisdaadbx.Text = "Totale misdrijven";
                 //Unchecks Checked Item
                 crimeCategoryBox.SetItemChecked(1, false);
                 crimeCategoryBox.SetItemChecked(2, false);
@@ -306,7 +335,7 @@ namespace Project3
             if (crimeCategoryBox.SelectedIndex == 1) //Vernielingen 
             {
                 ShowText.Text = province; //Shows text of the last checked province
-
+                chosenMisdaadbx.Text = "Vernielingen, misdr.openb.orde/gezag";
                 //Unchecks Checked Item
                 crimeCategoryBox.SetItemChecked(0, false);
                 crimeCategoryBox.SetItemChecked(2, false);
@@ -316,7 +345,7 @@ namespace Project3
             if (crimeCategoryBox.SelectedIndex == 2) //Drugsmisdrijven
             {
                 ShowText.Text = province; //Shows text of the last checked province
-
+                chosenMisdaadbx.Text = "Drugsmisdrijven";
                 //Unchecks Checked Item
                 crimeCategoryBox.SetItemChecked(0, false);
                 crimeCategoryBox.SetItemChecked(1, false);
@@ -407,21 +436,28 @@ namespace Project3
             if (comboBox1.SelectedIndex == 0)
             {
                 misdaad_aantal = true;
-                counter = -1;
-                provinceBox.SetItemChecked(0, false);
-                provinceBox.SetItemChecked(1, false);
-                provinceBox.SetItemChecked(2, false);
-                orderedList.Clear();
+                return_checked_provinces();
+                //counter = -1;
+                //provinceBox.SetItemChecked(0, false);
+                //provinceBox.SetItemChecked(1, false);
+                //provinceBox.SetItemChecked(2, false);
+                //orderedList.Clear();
             }
             if (comboBox1.SelectedIndex == 1)
             {
                 misdaad_aantal = false;
-                counter = -1;
-                provinceBox.SetItemChecked(0, false);
-                provinceBox.SetItemChecked(1, false);
-                provinceBox.SetItemChecked(2, false);
-                orderedList.Clear();
+                return_checked_provinces();
+                //counter = -1;
+                //provinceBox.SetItemChecked(0, false);
+                //provinceBox.SetItemChecked(1, false);
+                //provinceBox.SetItemChecked(2, false);
+                //orderedList.Clear();
             }
+        }
+
+        private void chosenYearbx_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

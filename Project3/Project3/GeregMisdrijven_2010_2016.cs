@@ -63,7 +63,7 @@ namespace Project3
             return dt;
         }
         //Selecting data from database
-        public DataTable Select_bevolking(string province, string extquery = "")
+        public DataTable Select_bevolking(string province)
         {
             //Step 1 Database Connection
             SqlConnection conn = new SqlConnection(myconnstrng);
@@ -72,17 +72,19 @@ namespace Project3
             try
             {
                 //Step 2: Writing Sql Query
-                string sql = "SELECT * FROM bevolkingsontwikkeling WHERE regio LIKE %" + province + "%;";
+                string sql = "SELECT * FROM bevolkingsontwikkeling WHERE regio LIKE '" + province + " (PV)';";
                 //Creating cmd using sql and conn
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 //Creating Sql Data adapter with cmd
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                 conn.Open();
+                Console.WriteLine("Data connectie werkt.");
                 adapter.Fill(dt);
 
             }
             catch (Exception ex)
             {
+                Console.WriteLine("Data connectie werkt niet.");
             }
             finally
             {
