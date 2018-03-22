@@ -220,58 +220,58 @@ namespace Project3
 
         private void province_map() //This function places the corresponding image with the last checked province
         {
-            if (CheckLastprovince() == "Drenthe") //Checks if the last selected province corresponds with 'Flevoland'
-            {
-                pictureBox1.Image = Properties.Resources.Drenthe_arced; //sets the picture with Flevoland arced.
-            }
-            else if (CheckLastprovince() == "Flevoland")
-            {
-                pictureBox1.Image = Properties.Resources.Flevoland_arced; //sets the picture with Drenthe arced.
-            }
-            else if (CheckLastprovince() == "Friesland")
-            {
-                pictureBox1.Image = Properties.Resources.Friesland_arced; //sets the picture with Groningen arced.
-            }
-            else if (CheckLastprovince() == "Gelderland")
-            {
-                pictureBox1.Image = Properties.Resources.Gelderland_arced; //sets the picture with Groningen arced.
-            }
-            else if (CheckLastprovince() == "Groningen")
-            {
-                pictureBox1.Image = Properties.Resources.Groningen_arced; //sets the picture with Groningen arced.
-            }
-            else if (CheckLastprovince() == "Limburg")
-            {
-                pictureBox1.Image = Properties.Resources.Limburg_arced; //sets the picture with Groningen arced.
-            }
-            else if (CheckLastprovince() == "Noord-Brabant")
-            {
-                pictureBox1.Image = Properties.Resources.NoordBrabant_arced; //sets the picture with Groningen arced.
-            }
-            else if (CheckLastprovince() == "Noord-Holland")
-            {
-                pictureBox1.Image = Properties.Resources.NoordHolland_arced; //sets the picture with Groningen arced.
-            }
-            else if (CheckLastprovince() == "Overijssel")
-            {
-                pictureBox1.Image = Properties.Resources.Overijssel_arced; //sets the picture with Groningen arced.
-            }
-            else if (CheckLastprovince() == "Utrecht")
-            {
-                pictureBox1.Image = Properties.Resources.Utrecht_arced; //sets the picture with Groningen arced.
-            }
-            else if (CheckLastprovince() == "Zeeland")
-            {
-                pictureBox1.Image = Properties.Resources.Zeeland_arced; //sets the picture with Groningen arced.
-            }
-            else if (CheckLastprovince() == "Zuid-Holland")
-            {
-                pictureBox1.Image = Properties.Resources.ZuidHolland_arced; //sets the picture with Groningen arced.
-            }
-            else
-            {
-                pictureBox1.Image = Properties.Resources.full_map; //When there is nothing checked in the checkboxlist.. set the full map with nothing arced.
-            }
+            //if (CheckLastprovince() == "Drenthe") //Checks if the last selected province corresponds with 'Flevoland'
+            //{
+            //    pictureBox1.Image = Properties.Resources.Drenthe_arced; //sets the picture with Flevoland arced.
+            //}
+            //else if (CheckLastprovince() == "Flevoland")
+            //{
+            //    pictureBox1.Image = Properties.Resources.Flevoland_arced; //sets the picture with Drenthe arced.
+            //}
+            //else if (CheckLastprovince() == "Friesland")
+            //{
+            //    pictureBox1.Image = Properties.Resources.Friesland_arced; //sets the picture with Groningen arced.
+            //}
+            //else if (CheckLastprovince() == "Gelderland")
+            //{
+            //    pictureBox1.Image = Properties.Resources.Gelderland_arced; //sets the picture with Groningen arced.
+            //}
+            //else if (CheckLastprovince() == "Groningen")
+            //{
+            //    pictureBox1.Image = Properties.Resources.Groningen_arced; //sets the picture with Groningen arced.
+            //}
+            //else if (CheckLastprovince() == "Limburg")
+            //{
+            //    pictureBox1.Image = Properties.Resources.Limburg_arced; //sets the picture with Groningen arced.
+            //}
+            //else if (CheckLastprovince() == "Noord-Brabant")
+            //{
+            //    pictureBox1.Image = Properties.Resources.NoordBrabant_arced; //sets the picture with Groningen arced.
+            //}
+            //else if (CheckLastprovince() == "Noord-Holland")
+            //{
+            //    pictureBox1.Image = Properties.Resources.NoordHolland_arced; //sets the picture with Groningen arced.
+            //}
+            //else if (CheckLastprovince() == "Overijssel")
+            //{
+            //    pictureBox1.Image = Properties.Resources.Overijssel_arced; //sets the picture with Groningen arced.
+            //}
+            //else if (CheckLastprovince() == "Utrecht")
+            //{
+            //    pictureBox1.Image = Properties.Resources.Utrecht_arced; //sets the picture with Groningen arced.
+            //}
+            //else if (CheckLastprovince() == "Zeeland")
+            //{
+            //    pictureBox1.Image = Properties.Resources.Zeeland_arced; //sets the picture with Groningen arced.
+            //}
+            //else if (CheckLastprovince() == "Zuid-Holland")
+            //{
+            //    pictureBox1.Image = Properties.Resources.ZuidHolland_arced; //sets the picture with Groningen arced.
+            //}
+            //else
+            //{
+            //    pictureBox1.Image = Properties.Resources.full_map; //When there is nothing checked in the checkboxlist.. set the full map with nothing arced.
+            //}
         }
         private void set_settings_province(int index_num, string province) 
             //This function wraps up and sets the settings for the last checked province.
