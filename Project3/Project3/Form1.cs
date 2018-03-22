@@ -339,103 +339,103 @@ namespace Project3
                 }
                 Console.WriteLine(counter.ToString());
             }
-            if (checked_items.Contains("Drenthe"))
-            {
-                bxDrenthe.Visible = true;
-            }
-            if (checked_items.Contains("Flevoland"))
-            {
-                bxFlevoland.Visible = true;
-            }
-            if (checked_items.Contains("Friesland"))
-            {
-                bxFriesland.Visible = true;
-            }
-            if (checked_items.Contains("Gelderland"))
-            {
-                bxGelderland.Visible = true;
-            }
-            if (checked_items.Contains("Groningen"))
-            {
-                bxGroningen.Visible = true;
-            }
-            if (checked_items.Contains("Limburg"))
-            {
-                bxLimburg.Visible = true;
-            }
-            if (checked_items.Contains("Noord-Brabant"))
-            {
-                bxNB.Visible = true;
-            }
-            if (checked_items.Contains("Noord-Holland"))
-            {
-                bxNH.Visible = true;
-            }
-            if (checked_items.Contains("Overijssel"))
-            {
-                bxOverijssel.Visible = true;
-            }
-            if (checked_items.Contains("Utrecht"))
-            {
-                bxUtrecht.Visible = true;
-            }
-            if (checked_items.Contains("Zeeland"))
-            {
-                bxZeeland.Visible = true;
-            }
-            if (checked_items.Contains("Zuid-Holland"))
-            {
-                bxZH.Visible = true;
-            }
+            //if (checked_items.Contains("Drenthe"))
+            //{
+            //    bxDrenthe.Visible = true;
+            //}
+            //if (checked_items.Contains("Flevoland"))
+            //{
+            //    bxFlevoland.Visible = true;
+            //}
+            //if (checked_items.Contains("Friesland"))
+            //{
+            //    bxFriesland.Visible = true;
+            //}
+            //if (checked_items.Contains("Gelderland"))
+            //{
+            //    bxGelderland.Visible = true;
+            //}
+            //if (checked_items.Contains("Groningen"))
+            //{
+            //    bxGroningen.Visible = true;
+            //}
+            //if (checked_items.Contains("Limburg"))
+            //{
+            //    bxLimburg.Visible = true;
+            //}
+            //if (checked_items.Contains("Noord-Brabant"))
+            //{
+            //    bxNB.Visible = true;
+            //}
+            //if (checked_items.Contains("Noord-Holland"))
+            //{
+            //    bxNH.Visible = true;
+            //}
+            //if (checked_items.Contains("Overijssel"))
+            //{
+            //    bxOverijssel.Visible = true;
+            //}
+            //if (checked_items.Contains("Utrecht"))
+            //{
+            //    bxUtrecht.Visible = true;
+            //}
+            //if (checked_items.Contains("Zeeland"))
+            //{
+            //    bxZeeland.Visible = true;
+            //}
+            //if (checked_items.Contains("Zuid-Holland"))
+            //{
+            //    bxZH.Visible = true;
+            //}
 
-            if (checked_items.Contains("Drenthe") == false)
-            {
-                bxDrenthe.Visible = false;
-            }
-            if (checked_items.Contains("Flevoland") == false)
-            {
-                bxFlevoland.Visible = false;
-            }
-            if (checked_items.Contains("Friesland") == false)
-            {
-                bxFriesland.Visible = false;
-            }
-            if (checked_items.Contains("Gelderland") == false)
-            {
-                bxGelderland.Visible = false;
-            }
-            if (checked_items.Contains("Groningen") == false)
-            {
-                bxGroningen.Visible = false;
-            }
-            if (checked_items.Contains("Limburg") == false)
-            {
-                bxLimburg.Visible = false;
-            }
-            if (checked_items.Contains("Noord-Brabant") == false)
-            {
-                bxNB.Visible = false;
-            }
-            if (checked_items.Contains("Noord-Holland") == false)
-            {
-                bxNH.Visible = false;
-            }
-            if (checked_items.Contains("Overijssel") == false)
-            {
-                bxOverijssel.Visible = false;
-            }
-            if (checked_items.Contains("Utrecht") == false)
-            {
-                bxUtrecht.Visible = false;
-            }
-            if (checked_items.Contains("Zeeland") == false)
-            {
-                bxZeeland.Visible = false;
-            }
-            if (checked_items.Contains("Zuid-Holland") == false)
-            {
-                bxZH.Visible = false;
-            }
+            //if (checked_items.Contains("Drenthe") == false)
+            //{
+            //    bxDrenthe.Visible = false;
+            //}
+            //if (checked_items.Contains("Flevoland") == false)
+            //{
+            //    bxFlevoland.Visible = false;
+            //}
+            //if (checked_items.Contains("Friesland") == false)
+            //{
+            //    bxFriesland.Visible = false;
+            //}
+            //if (checked_items.Contains("Gelderland") == false)
+            //{
+            //    bxGelderland.Visible = false;
+            //}
+            //if (checked_items.Contains("Groningen") == false)
+            //{
+            //    bxGroningen.Visible = false;
+            //}
+            //if (checked_items.Contains("Limburg") == false)
+            //{
+            //    bxLimburg.Visible = false;
+            //}
+            //if (checked_items.Contains("Noord-Brabant") == false)
+            //{
+            //    bxNB.Visible = false;
+            //}
+            //if (checked_items.Contains("Noord-Holland") == false)
+            //{
+            //    bxNH.Visible = false;
+            //}
+            //if (checked_items.Contains("Overijssel") == false)
+            //{
+            //    bxOverijssel.Visible = false;
+            //}
+            //if (checked_items.Contains("Utrecht") == false)
+            //{
+            //    bxUtrecht.Visible = false;
+            //}
+            //if (checked_items.Contains("Zeeland") == false)
+            //{
+            //    bxZeeland.Visible = false;
+            //}
+            //if (checked_items.Contains("Zuid-Holland") == false)
+            //{
+            //    bxZH.Visible = false;
+            //}
 
         }
         private void set_data_and_map(string province) 
