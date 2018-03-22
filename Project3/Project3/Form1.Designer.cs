@@ -36,12 +36,10 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.DataShow = new System.Windows.Forms.TextBox();
             this.provinceLable = new System.Windows.Forms.Label();
             this.crimeCatLabel = new System.Windows.Forms.Label();
             this.provinceBox = new System.Windows.Forms.CheckedListBox();
             this.crimeCategoryBox = new System.Windows.Forms.CheckedListBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
@@ -62,6 +60,7 @@
             this.bxLimburg = new System.Windows.Forms.TextBox();
             this.bxZeeland = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.Jaarbalk)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -149,26 +148,12 @@
             this.label10.TabIndex = 14;
             this.label10.Text = "2016";
             // 
-            // DataShow
-            // 
-            this.DataShow.AcceptsReturn = true;
-            this.DataShow.BackColor = System.Drawing.Color.FloralWhite;
-            this.DataShow.Cursor = System.Windows.Forms.Cursors.No;
-            this.DataShow.HideSelection = false;
-            this.DataShow.Location = new System.Drawing.Point(923, 18);
-            this.DataShow.Multiline = true;
-            this.DataShow.Name = "DataShow";
-            this.DataShow.ReadOnly = true;
-            this.DataShow.Size = new System.Drawing.Size(300, 282);
-            this.DataShow.TabIndex = 23;
-            this.DataShow.TextChanged += new System.EventHandler(this.textBox1_TextChanged_2);
-            // 
             // provinceLable
             // 
             this.provinceLable.AutoSize = true;
             this.provinceLable.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.provinceLable.ForeColor = System.Drawing.Color.White;
-            this.provinceLable.Location = new System.Drawing.Point(1013, 371);
+            this.provinceLable.Location = new System.Drawing.Point(946, 269);
             this.provinceLable.Name = "provinceLable";
             this.provinceLable.Size = new System.Drawing.Size(144, 23);
             this.provinceLable.TabIndex = 30;
@@ -180,7 +165,7 @@
             this.crimeCatLabel.AutoSize = true;
             this.crimeCatLabel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.crimeCatLabel.ForeColor = System.Drawing.Color.White;
-            this.crimeCatLabel.Location = new System.Drawing.Point(1013, 611);
+            this.crimeCatLabel.Location = new System.Drawing.Point(946, 509);
             this.crimeCatLabel.Name = "crimeCatLabel";
             this.crimeCatLabel.Size = new System.Drawing.Size(172, 23);
             this.crimeCatLabel.TabIndex = 31;
@@ -201,7 +186,7 @@
             "Flevoland",
             "Drenthe",
             "Groningen"});
-            this.provinceBox.Location = new System.Drawing.Point(1017, 396);
+            this.provinceBox.Location = new System.Drawing.Point(950, 294);
             this.provinceBox.MultiColumn = true;
             this.provinceBox.Name = "provinceBox";
             this.provinceBox.Size = new System.Drawing.Size(140, 185);
@@ -221,7 +206,7 @@
             "Misdrijven Totaal",
             "Vernielingen",
             "Drugsmisdrijven"});
-            this.crimeCategoryBox.Location = new System.Drawing.Point(1017, 636);
+            this.crimeCategoryBox.Location = new System.Drawing.Point(950, 534);
             this.crimeCategoryBox.MultiColumn = true;
             this.crimeCategoryBox.Name = "crimeCategoryBox";
             this.crimeCategoryBox.Size = new System.Drawing.Size(168, 185);
@@ -229,19 +214,6 @@
             this.crimeCategoryBox.ThreeDCheckBoxes = true;
             this.crimeCategoryBox.Visible = false;
             this.crimeCategoryBox.SelectedIndexChanged += new System.EventHandler(this.checkedListBox2_SelectedIndexChanged);
-            // 
-            // button1
-            // 
-            this.button1.FlatAppearance.BorderSize = 2;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ControlDark;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlDark;
-            this.button1.Location = new System.Drawing.Point(1036, 306);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 52;
-            this.button1.Text = "Check";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_2);
             // 
             // label13
             // 
@@ -311,6 +283,7 @@
             // 
             this.bxZH.Location = new System.Drawing.Point(368, 506);
             this.bxZH.Name = "bxZH";
+            this.bxZH.ReadOnly = true;
             this.bxZH.Size = new System.Drawing.Size(112, 22);
             this.bxZH.TabIndex = 65;
             this.bxZH.Visible = false;
@@ -319,6 +292,7 @@
             // 
             this.bxNH.Location = new System.Drawing.Point(412, 353);
             this.bxNH.Name = "bxNH";
+            this.bxNH.ReadOnly = true;
             this.bxNH.Size = new System.Drawing.Size(112, 22);
             this.bxNH.TabIndex = 66;
             this.bxNH.Visible = false;
@@ -327,6 +301,7 @@
             // 
             this.bxUtrecht.Location = new System.Drawing.Point(495, 454);
             this.bxUtrecht.Name = "bxUtrecht";
+            this.bxUtrecht.ReadOnly = true;
             this.bxUtrecht.Size = new System.Drawing.Size(112, 22);
             this.bxUtrecht.TabIndex = 67;
             this.bxUtrecht.Visible = false;
@@ -335,14 +310,17 @@
             // 
             this.bxFlevoland.Location = new System.Drawing.Point(555, 343);
             this.bxFlevoland.Name = "bxFlevoland";
+            this.bxFlevoland.ReadOnly = true;
             this.bxFlevoland.Size = new System.Drawing.Size(112, 22);
             this.bxFlevoland.TabIndex = 68;
             this.bxFlevoland.Visible = false;
+            this.bxFlevoland.TextChanged += new System.EventHandler(this.bxFlevoland_TextChanged);
             // 
             // bxFriesland
             // 
             this.bxFriesland.Location = new System.Drawing.Point(581, 205);
             this.bxFriesland.Name = "bxFriesland";
+            this.bxFriesland.ReadOnly = true;
             this.bxFriesland.Size = new System.Drawing.Size(112, 22);
             this.bxFriesland.TabIndex = 69;
             this.bxFriesland.Visible = false;
@@ -351,6 +329,7 @@
             // 
             this.bxGroningen.Location = new System.Drawing.Point(747, 151);
             this.bxGroningen.Name = "bxGroningen";
+            this.bxGroningen.ReadOnly = true;
             this.bxGroningen.Size = new System.Drawing.Size(112, 22);
             this.bxGroningen.TabIndex = 70;
             this.bxGroningen.Visible = false;
@@ -359,6 +338,7 @@
             // 
             this.bxDrenthe.Location = new System.Drawing.Point(722, 258);
             this.bxDrenthe.Name = "bxDrenthe";
+            this.bxDrenthe.ReadOnly = true;
             this.bxDrenthe.Size = new System.Drawing.Size(112, 22);
             this.bxDrenthe.TabIndex = 71;
             this.bxDrenthe.Visible = false;
@@ -367,6 +347,7 @@
             // 
             this.bxOverijssel.Location = new System.Drawing.Point(709, 373);
             this.bxOverijssel.Name = "bxOverijssel";
+            this.bxOverijssel.ReadOnly = true;
             this.bxOverijssel.Size = new System.Drawing.Size(112, 22);
             this.bxOverijssel.TabIndex = 72;
             this.bxOverijssel.Visible = false;
@@ -375,6 +356,7 @@
             // 
             this.bxGelderland.Location = new System.Drawing.Point(647, 468);
             this.bxGelderland.Name = "bxGelderland";
+            this.bxGelderland.ReadOnly = true;
             this.bxGelderland.Size = new System.Drawing.Size(112, 22);
             this.bxGelderland.TabIndex = 73;
             this.bxGelderland.Visible = false;
@@ -383,6 +365,7 @@
             // 
             this.bxNB.Location = new System.Drawing.Point(500, 596);
             this.bxNB.Name = "bxNB";
+            this.bxNB.ReadOnly = true;
             this.bxNB.Size = new System.Drawing.Size(112, 22);
             this.bxNB.TabIndex = 74;
             this.bxNB.Visible = false;
@@ -391,6 +374,7 @@
             // 
             this.bxLimburg.Location = new System.Drawing.Point(623, 697);
             this.bxLimburg.Name = "bxLimburg";
+            this.bxLimburg.ReadOnly = true;
             this.bxLimburg.Size = new System.Drawing.Size(112, 22);
             this.bxLimburg.TabIndex = 75;
             this.bxLimburg.Visible = false;
@@ -399,6 +383,7 @@
             // 
             this.bxZeeland.Location = new System.Drawing.Point(275, 610);
             this.bxZeeland.Name = "bxZeeland";
+            this.bxZeeland.ReadOnly = true;
             this.bxZeeland.Size = new System.Drawing.Size(112, 22);
             this.bxZeeland.TabIndex = 76;
             this.bxZeeland.Visible = false;
@@ -414,6 +399,20 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_4);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Misdaadaantallen",
+            "Misdaad per 1.000 inwoners"});
+            this.comboBox1.Location = new System.Drawing.Point(950, 31);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(208, 24);
+            this.comboBox1.TabIndex = 77;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -421,6 +420,7 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.CornflowerBlue;
             this.ClientSize = new System.Drawing.Size(1260, 934);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.bxZeeland);
             this.Controls.Add(this.bxLimburg);
             this.Controls.Add(this.bxNB);
@@ -436,14 +436,12 @@
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.ShowText);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.crimeCategoryBox);
             this.Controls.Add(this.provinceBox);
             this.Controls.Add(this.crimeCatLabel);
             this.Controls.Add(this.provinceLable);
-            this.Controls.Add(this.DataShow);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -477,13 +475,11 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox DataShow;
         private System.Windows.Forms.Label provinceLable;
         private System.Windows.Forms.Label crimeCatLabel;
         private System.Windows.Forms.CheckedListBox provinceBox;
         private System.Windows.Forms.CheckedListBox crimeCategoryBox;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label17;
@@ -503,6 +499,7 @@
         private System.Windows.Forms.TextBox bxNB;
         private System.Windows.Forms.TextBox bxLimburg;
         private System.Windows.Forms.TextBox bxZeeland;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 

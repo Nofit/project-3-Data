@@ -41,24 +41,48 @@ namespace Project3
             DataTable dt = new DataTable();
             try
             {
-
                 province = province.ToLower();
-                Console.WriteLine(province);
                 //Step 2: Writing Sql Query
                 string sql = "SELECT * FROM misdrijf_" + province + " " + extquery + ";";
                 //Creating cmd using sql and conn
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 //Creating Sql Data adapter with cmd
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-
                 conn.Open();
-                Console.WriteLine("Data connectie werkt.");
                 adapter.Fill(dt);
  
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Data connectie werkt niet.");
+            }
+            finally
+            {
+                conn.Close();
+
+            }
+            return dt;
+        }
+        //Selecting data from database
+        public DataTable Select_bevolking(string province, string extquery = "")
+        {
+            //Step 1 Database Connection
+            SqlConnection conn = new SqlConnection(myconnstrng);
+
+            DataTable dt = new DataTable();
+            try
+            {
+                //Step 2: Writing Sql Query
+                string sql = "SELECT * FROM bevolkingsontwikkeling WHERE regio LIKE %" + province + "%;";
+                //Creating cmd using sql and conn
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                //Creating Sql Data adapter with cmd
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                conn.Open();
+                adapter.Fill(dt);
+
+            }
+            catch (Exception ex)
+            {
             }
             finally
             {
