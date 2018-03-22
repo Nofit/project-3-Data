@@ -540,6 +540,7 @@ namespace Project3
             if (comboBox1.SelectedIndex == 1)
             {
                 misdaad_aantal = false;
+                return_checked_provinces();
             }
         }
         private void crime_uncheck(int forbidden_int)
