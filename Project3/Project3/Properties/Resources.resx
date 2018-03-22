@@ -133,4 +133,28 @@
   <data name="Groningen_arced" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Groningen_arced.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Friesland_arced" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Friesland_arced.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Limburg_arced" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Limburg_arced.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NoordBrabant_arced" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NoordBrabant_arced.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NoordHolland_arced" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NoordHolland_arced.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Overijssel_arced" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Overijssel_arced.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Utrecht_arced" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Utrecht_arced.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Zeeland_arced" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Zeeland_arced.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ZuidHolland_arced" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ZuidHolland_arced.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

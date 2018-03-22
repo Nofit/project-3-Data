@@ -105,5 +105,29 @@
   <ItemGroup>
     <None Include="Resources\Image1.bmp" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Friesland_arced.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Limburg_arced.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NoordBrabant_arced.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NoordHolland_arced.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Overijssel_arced.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Utrecht_arced.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zeeland_arced.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ZuidHolland_arced.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -83,6 +83,16 @@ namespace Project3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Friesland_arced {
+            get {
+                object obj = ResourceManager.GetObject("Friesland_arced", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap full_map {
             get {
                 object obj = ResourceManager.GetObject("full_map", resourceCulture);
@@ -106,6 +116,76 @@ namespace Project3.Properties {
         internal static System.Drawing.Bitmap Groningen_arced {
             get {
                 object obj = ResourceManager.GetObject("Groningen_arced", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Limburg_arced {
+            get {
+                object obj = ResourceManager.GetObject("Limburg_arced", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap NoordBrabant_arced {
+            get {
+                object obj = ResourceManager.GetObject("NoordBrabant_arced", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap NoordHolland_arced {
+            get {
+                object obj = ResourceManager.GetObject("NoordHolland_arced", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Overijssel_arced {
+            get {
+                object obj = ResourceManager.GetObject("Overijssel_arced", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Utrecht_arced {
+            get {
+                object obj = ResourceManager.GetObject("Utrecht_arced", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Zeeland_arced {
+            get {
+                object obj = ResourceManager.GetObject("Zeeland_arced", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ZuidHolland_arced {
+            get {
+                object obj = ResourceManager.GetObject("ZuidHolland_arced", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -29,7 +29,9 @@ namespace Project3
         string wapen_query = "WHERE soort_misdrijf LIKE '%wapen%'";
         string overige_query = "WHERE soort_misdrijf LIKE '%overige%'";
         string[] provincies = new string[] { "Drenthe", "Flevoland", "Friesland", "Gelderland", "Groningen", "Limburg", "Noord-Brabant", "Noord-Holland", "Overijssel", "Utrecht", "Zeeland", "Zuid-Holland" };
-
+        string[] provincies_for_data = new string[] { "Drenthe", "Flevoland", "Friesland", "Gelderland", "Groningen", "Limburg", "NoordBrabant", "NoordHolland", "Overijssel", "Utrecht", "Zeeland", "ZuidHolland" };
+        string[] crimes = new string[] { "Totale misdrijven", "Vermogensmisdrijven", "Vernielingen, misdr.openb.orde/gezag", "Gewelds - en seksuele misdrijven", "Misdrijven WvSr(overig)", "Verkeersmisdrijven", "Drugsmisdrijven", "(Vuur)wapenmisdrijven", "Misdrijven overige wetten" };
+        string[] years = new string[] {"2010", "2011", "2012", "2013", "2014", "2015", "2016"};
         int counter = -1;
         List<string> orderedList = new List<string>(new string[] {});
         string last_province = "";
@@ -50,33 +52,12 @@ namespace Project3
             trackbar_index = Jaarbalk.Value;
             set_data_and_map(CheckLastprovince()); //references to the function.. what shows data on screen and changes map to corresponding province
             return_checked_provinces();
-            if (trackbar_index == 0)
+            for(int index = 0; index < 7; index++)
             {
-                chosenYearbx.Text = "2010";
-            }
-            if (trackbar_index == 1)
-            {
-                chosenYearbx.Text = "2011";
-            }
-            if (trackbar_index == 2)
-            {
-                chosenYearbx.Text = "2012";
-            }
-            if (trackbar_index == 3)
-            {
-                chosenYearbx.Text = "2013";
-            }
-            if (trackbar_index == 4)
-            {
-                chosenYearbx.Text = "2014";
-            }
-            if (trackbar_index == 5)
-            {
-                chosenYearbx.Text = "2015";
-            }
-            if (trackbar_index == 6)
-            {
-                chosenYearbx.Text = "2016";
+                if(trackbar_index == index)
+                {
+                    chosenYearbx.Text = years[index];
+                }
             }
         }
 
@@ -148,8 +129,7 @@ namespace Project3
             crimeCategoryBox.Visible = true;
             crimeCatLabel.Visible = true;         
             try
-            {
-       
+            {     
                 for(int index = 0; index < 12; index++)
                 {
                     if (provinceBox.SelectedIndex == index)//flevoland
@@ -163,18 +143,10 @@ namespace Project3
             {
                 System.Windows.Forms.MessageBox.Show("Please refrain from spamming the program.");
                 counter = -1;
-                provinceBox.SetItemChecked(0, false);
-                provinceBox.SetItemChecked(1, false);
-                provinceBox.SetItemChecked(2, false);
-                provinceBox.SetItemChecked(3, false);
-                provinceBox.SetItemChecked(4, false);
-                provinceBox.SetItemChecked(5, false);
-                provinceBox.SetItemChecked(6, false);
-                provinceBox.SetItemChecked(7, false);
-                provinceBox.SetItemChecked(8, false);
-                provinceBox.SetItemChecked(9, false);
-                provinceBox.SetItemChecked(10, false);
-                provinceBox.SetItemChecked(11, false);
+                for(int index = 0; index < 12; index++)
+                {
+                    provinceBox.SetItemChecked(index, false);
+                }           
                 orderedList.Clear();
             }
             set_data_and_map(CheckLastprovince()); //references to the function.. what shows data on screen and changes map to corresponding province
@@ -248,17 +220,53 @@ namespace Project3
 
         private void province_map() //This function places the corresponding image with the last checked province
         {
-            if (CheckLastprovince() == "Flevoland") //Checks if the last selected province corresponds with 'Flevoland'
+            if (CheckLastprovince() == "Drenthe") //Checks if the last selected province corresponds with 'Flevoland'
             {
-                pictureBox1.Image = Properties.Resources.Flevoland_arced; //sets the picture with Flevoland arced.
+                pictureBox1.Image = Properties.Resources.Drenthe_arced; //sets the picture with Flevoland arced.
             }
-            else if (CheckLastprovince() == "Drenthe")
+            else if (CheckLastprovince() == "Flevoland")
             {
-                pictureBox1.Image = Properties.Resources.Drenthe_arced; //sets the picture with Drenthe arced.
+                pictureBox1.Image = Properties.Resources.Flevoland_arced; //sets the picture with Drenthe arced.
+            }
+            else if (CheckLastprovince() == "Friesland")
+            {
+                pictureBox1.Image = Properties.Resources.Friesland_arced; //sets the picture with Groningen arced.
+            }
+            else if (CheckLastprovince() == "Gelderland")
+            {
+                pictureBox1.Image = Properties.Resources.Gelderland_arced; //sets the picture with Groningen arced.
             }
             else if (CheckLastprovince() == "Groningen")
             {
                 pictureBox1.Image = Properties.Resources.Groningen_arced; //sets the picture with Groningen arced.
+            }
+            else if (CheckLastprovince() == "Limburg")
+            {
+                pictureBox1.Image = Properties.Resources.Limburg_arced; //sets the picture with Groningen arced.
+            }
+            else if (CheckLastprovince() == "Noord-Brabant")
+            {
+                pictureBox1.Image = Properties.Resources.NoordBrabant_arced; //sets the picture with Groningen arced.
+            }
+            else if (CheckLastprovince() == "Noord-Holland")
+            {
+                pictureBox1.Image = Properties.Resources.NoordHolland_arced; //sets the picture with Groningen arced.
+            }
+            else if (CheckLastprovince() == "Overijssel")
+            {
+                pictureBox1.Image = Properties.Resources.Overijssel_arced; //sets the picture with Groningen arced.
+            }
+            else if (CheckLastprovince() == "Utrecht")
+            {
+                pictureBox1.Image = Properties.Resources.Utrecht_arced; //sets the picture with Groningen arced.
+            }
+            else if (CheckLastprovince() == "Zeeland")
+            {
+                pictureBox1.Image = Properties.Resources.Zeeland_arced; //sets the picture with Groningen arced.
+            }
+            else if (CheckLastprovince() == "Zuid-Holland")
+            {
+                pictureBox1.Image = Properties.Resources.ZuidHolland_arced; //sets the picture with Groningen arced.
             }
             else
             {
@@ -310,8 +318,7 @@ namespace Project3
             //This functions shows data in the screen and changes the map according to the last selected province.. 
             //It also unchecks other crime category checks, cause only one check at a time for the crimecategorybox is allowed.
         {
-            string[] crimes = new string[] { "Totale misdrijven", "Vermogensmisdrijven", "Vernielingen, misdr.openb.orde/gezag", "Gewelds - en seksuele misdrijven", "Misdrijven WvSr(overig)", "Verkeersmisdrijven", "Drugsmisdrijven", "(Vuur)wapenmisdrijven", "Misdrijven overige wetten" };
-
+  
             for(int index = 0; index < 10; index++)
             {
                 if (crimeCategoryBox.SelectedIndex == index) //Misdrijven Totaal 
@@ -324,80 +331,6 @@ namespace Project3
                     province_map(); //Function that changes the map according to the last checked province
                 }
             }
-
-            //if (crimeCategoryBox.SelectedIndex == 0) //Misdrijven Totaal 
-            //{
-            //    ShowText.Text = province; //Shows text of the last checked province
-            //    chosenMisdaadbx.Text = "Totale misdrijven";
-            //    //Unchecks Checked Item
-            //    crime_uncheck(0);
-            //    //In this case the totaal_query gets processed
-            //    province_map(); //Function that changes the map according to the last checked province
-            //}
-            //if (crimeCategoryBox.SelectedIndex == 1) //Vermogen
-            //{
-            //    ShowText.Text = province; //Shows text of the last checked province
-            //    chosenMisdaadbx.Text = "Vermogensmisdrijven";
-            //    //Unchecks Checked Item
-            //    crime_uncheck(1);
-            //    province_map(); //Function that changes the map according to the last checked province
-            //}
-            //if (crimeCategoryBox.SelectedIndex == 2) //vernieligen
-            //{
-            //    ShowText.Text = province; //Shows text of the last checked province
-            //    chosenMisdaadbx.Text = "Vernielingen, misdr.openb.orde/gezag";
-            //    //Unchecks Checked Item
-            //    crime_uncheck(2);
-            //    province_map(); //Function that changes the map according to the last checked province
-            //}
-            //if (crimeCategoryBox.SelectedIndex == 3) //geweld seksuele
-            //{
-            //    ShowText.Text = province; //Shows text of the last checked province
-            //    chosenMisdaadbx.Text = "Gewelds - en seksuele misdrijven";
-            //    //Unchecks Checked Item
-            //    crime_uncheck(3);
-            //    province_map(); //Function that changes the map according to the last checked province
-            //}
-            //if (crimeCategoryBox.SelectedIndex == 4) //wvsr
-            //{
-            //    ShowText.Text = province; //Shows text of the last checked province
-            //    chosenMisdaadbx.Text = "Misdrijven WvSr(overig)";
-            //    //Unchecks Checked Item
-            //    crime_uncheck(4);
-            //    province_map(); //Function that changes the map according to the last checked province
-            //}
-            //if (crimeCategoryBox.SelectedIndex == 5) //verkeersmisdrijven
-            //{
-            //    ShowText.Text = province; //Shows text of the last checked province
-            //    chosenMisdaadbx.Text = "Verkeersmisdrijven";
-            //    //Unchecks Checked Item
-            //    crime_uncheck(5);
-            //    province_map(); //Function that changes the map according to the last checked province
-            //}
-            //if (crimeCategoryBox.SelectedIndex == 6) //Drugsmisdrijven
-            //{
-            //    ShowText.Text = province; //Shows text of the last checked province
-            //    chosenMisdaadbx.Text = "Drugsmisdrijven";//drugsmisdrijven
-            //    //Unchecks Checked Item
-            //    crime_uncheck(6);
-            //    province_map(); //Function that changes the map according to the last checked province
-            //}
-            //if (crimeCategoryBox.SelectedIndex == 7) //(Vuur)wapenmisdrijven
-            //{
-            //    ShowText.Text = province; //Shows text of the last checked province
-            //    chosenMisdaadbx.Text = "(Vuur)wapenmisdrijven";
-            //    //Unchecks Checked Item
-            //    crime_uncheck(7);
-            //    province_map(); //Function that changes the map according to the last checked province
-            //}
-            //if (crimeCategoryBox.SelectedIndex == 8) //Misdrijven overige wetten
-            //{
-            //    ShowText.Text = province; //Shows text of the last checked province
-            //    chosenMisdaadbx.Text = "Misdrijven overige wetten";
-            //    //Unchecks Checked Item
-            //    crime_uncheck(8);
-            //    province_map(); //Function that changes the map according to the last checked province
-            //}
         }
 
         private void label12_Click_1(object sender, EventArgs e)
