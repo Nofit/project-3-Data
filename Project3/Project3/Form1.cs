@@ -116,15 +116,51 @@ namespace Project3
 
                 if (provinceBox.SelectedIndex == 0)//flevoland
                 {
-                    set_settings_province(0, "Flevoland");
+                    set_settings_province(0, "Drenthe");
                 }
                 if (provinceBox.SelectedIndex == 1)
                 {
-                    set_settings_province(1, "Drenthe");
+                    set_settings_province(1, "Flevoland");
                 }
                 if (provinceBox.SelectedIndex == 2)
                 {
-                    set_settings_province(2, "Groningen");
+                    set_settings_province(2, "Friesland");
+                }
+                if (provinceBox.SelectedIndex == 3)//flevoland
+                {
+                    set_settings_province(0, "Gelderland");
+                }
+                if (provinceBox.SelectedIndex == 4)
+                {
+                    set_settings_province(1, "Groningen");
+                }
+                if (provinceBox.SelectedIndex == 5)
+                {
+                    set_settings_province(2, "Limburg");
+                }
+                if (provinceBox.SelectedIndex == 6)//flevoland
+                {
+                    set_settings_province(0, "Noord-Brabant");
+                }
+                if (provinceBox.SelectedIndex == 7)
+                {
+                    set_settings_province(1, "Noord-Holland");
+                }
+                if (provinceBox.SelectedIndex == 8)
+                {
+                    set_settings_province(2, "Overijssel");
+                }
+                if (provinceBox.SelectedIndex == 9)//flevoland
+                {
+                    set_settings_province(0, "Utrecht");
+                }
+                if (provinceBox.SelectedIndex == 10)
+                {
+                    set_settings_province(1, "Zeeland");
+                }
+                if (provinceBox.SelectedIndex == 11)
+                {
+                    set_settings_province(2, "Zuid-Holland");
                 }
                 return_checked_provinces();
             }
@@ -135,6 +171,15 @@ namespace Project3
                 provinceBox.SetItemChecked(0, false);
                 provinceBox.SetItemChecked(1, false);
                 provinceBox.SetItemChecked(2, false);
+                provinceBox.SetItemChecked(3, false);
+                provinceBox.SetItemChecked(4, false);
+                provinceBox.SetItemChecked(5, false);
+                provinceBox.SetItemChecked(6, false);
+                provinceBox.SetItemChecked(7, false);
+                provinceBox.SetItemChecked(8, false);
+                provinceBox.SetItemChecked(9, false);
+                provinceBox.SetItemChecked(10, false);
+                provinceBox.SetItemChecked(11, false);
                 orderedList.Clear();
             }
             set_data_and_map(CheckLastprovince()); //references to the function.. what shows data on screen and changes map to corresponding province
@@ -144,7 +189,10 @@ namespace Project3
         {
             set_data_and_map(CheckLastprovince()); //references to the function.. what shows data on screen and changes map to corresponding province
             return_checked_provinces();
-            if(provinceBox.GetItemChecked(0) == false & provinceBox.GetItemChecked(1) == false & provinceBox.GetItemChecked(2) == false)
+            if(provinceBox.GetItemChecked(0) == false & provinceBox.GetItemChecked(1) == false & provinceBox.GetItemChecked(2) == false
+                & provinceBox.GetItemChecked(3) == false & provinceBox.GetItemChecked(4) == false & provinceBox.GetItemChecked(5) == false
+                & provinceBox.GetItemChecked(6) == false & provinceBox.GetItemChecked(7) == false & provinceBox.GetItemChecked(8) == false
+                & provinceBox.GetItemChecked(9) == false & provinceBox.GetItemChecked(10) == false & provinceBox.GetItemChecked(11) == false)
             {
                 System.Windows.Forms.MessageBox.Show("Select a province first!");
             }
@@ -261,7 +309,7 @@ namespace Project3
                 crimeCategoryBox.SetSelected(0, true); //Sets automatically selection at misdrijven Totaal filter
                 crimeCategoryBox.SetItemChecked(0, true); //Sets automatically check at misdrijven Totaal filter
 
-                if (counter < 2) //Counts up only till 2 ... 2 indicates the number of indexes in the checkboxlist and so the number of indexes allowed in the orderedlist 
+                if (counter < 11) //Counts up only till 2 ... 2 indicates the number of indexes in the checkboxlist and so the number of indexes allowed in the orderedlist 
                 {
                     counter++;
                 }
@@ -291,30 +339,104 @@ namespace Project3
                 }
                 Console.WriteLine(counter.ToString());
             }
+            if (checked_items.Contains("Drenthe"))
+            {
+                bxDrenthe.Visible = true;
+            }
             if (checked_items.Contains("Flevoland"))
             {
                 bxFlevoland.Visible = true;
             }
-            if (checked_items.Contains("Drenthe"))
+            if (checked_items.Contains("Friesland"))
             {
-                bxDrenthe.Visible = true;
+                bxFriesland.Visible = true;
+            }
+            if (checked_items.Contains("Gelderland"))
+            {
+                bxGelderland.Visible = true;
             }
             if (checked_items.Contains("Groningen"))
             {
                 bxGroningen.Visible = true;
             }
+            if (checked_items.Contains("Limburg"))
+            {
+                bxLimburg.Visible = true;
+            }
+            if (checked_items.Contains("Noord-Brabant"))
+            {
+                bxNB.Visible = true;
+            }
+            if (checked_items.Contains("Noord-Holland"))
+            {
+                bxNH.Visible = true;
+            }
+            if (checked_items.Contains("Overijssel"))
+            {
+                bxOverijssel.Visible = true;
+            }
+            if (checked_items.Contains("Utrecht"))
+            {
+                bxUtrecht.Visible = true;
+            }
+            if (checked_items.Contains("Zeeland"))
+            {
+                bxZeeland.Visible = true;
+            }
+            if (checked_items.Contains("Zuid-Holland"))
+            {
+                bxZH.Visible = true;
+            }
+
+            if (checked_items.Contains("Drenthe") == false)
+            {
+                bxDrenthe.Visible = false;
+            }
             if (checked_items.Contains("Flevoland") == false)
             {
                 bxFlevoland.Visible = false;
             }
-            if (checked_items.Contains("Drenthe") == false)
+            if (checked_items.Contains("Friesland") == false)
             {
-                bxDrenthe.Visible = false;
+                bxFriesland.Visible = false;
+            }
+            if (checked_items.Contains("Gelderland") == false)
+            {
+                bxGelderland.Visible = false;
             }
             if (checked_items.Contains("Groningen") == false)
             {
                 bxGroningen.Visible = false;
             }
+            if (checked_items.Contains("Limburg") == false)
+            {
+                bxLimburg.Visible = false;
+            }
+            if (checked_items.Contains("Noord-Brabant") == false)
+            {
+                bxNB.Visible = false;
+            }
+            if (checked_items.Contains("Noord-Holland") == false)
+            {
+                bxNH.Visible = false;
+            }
+            if (checked_items.Contains("Overijssel") == false)
+            {
+                bxOverijssel.Visible = false;
+            }
+            if (checked_items.Contains("Utrecht") == false)
+            {
+                bxUtrecht.Visible = false;
+            }
+            if (checked_items.Contains("Zeeland") == false)
+            {
+                bxZeeland.Visible = false;
+            }
+            if (checked_items.Contains("Zuid-Holland") == false)
+            {
+                bxZH.Visible = false;
+            }
+
         }
         private void set_data_and_map(string province) 
             //This functions shows data in the screen and changes the map according to the last selected province.. 
@@ -370,16 +492,25 @@ namespace Project3
         }
         private void return_checked_provinces()
         {
-            bool flevo = true;
             bool drenthe = true;
+            bool flevoland = true;
+            bool friesland = true;
+            bool gelderland = true;
             bool groningen = true;
+            bool limburg = true;
+            bool nb = true;
+            bool nh = true;
+            bool overijssel = true;
+            bool utrecht = true;
+            bool zeeland = true;
+            bool zh = true;
 
             for (int i = 0; i < orderedList.Count; i++)
             {
                 if (orderedList[i].Contains("Flevoland"))
                 {
                     bxFlevoland.Visible = true;
-                    flevo = false;
+                    flevoland = false;
                     bxFlevoland.Text = data_format("Flevoland", return_misdrijf_type());
                 }
                 if (orderedList[i].Contains("Drenthe"))
@@ -394,8 +525,62 @@ namespace Project3
                     groningen = false;
                     bxGroningen.Text = data_format("Groningen", return_misdrijf_type());
                 }
+                if (orderedList[i].Contains("Friesland"))
+                {
+                    bxFriesland.Visible = true;
+                    friesland = false;
+                    bxFriesland.Text = data_format("Friesland", return_misdrijf_type());
+                }
+                if (orderedList[i].Contains("Gelderland"))
+                {
+                    bxGelderland.Visible = true;
+                    gelderland = false;
+                    bxGelderland.Text = data_format("Drenthe", return_misdrijf_type());
+                }
+                if (orderedList[i].Contains("Limburg"))
+                {
+                    bxLimburg.Visible = true;
+                    limburg = false;
+                    bxLimburg.Text = data_format("Limburg", return_misdrijf_type());
+                }
+                if (orderedList[i].Contains("Noord-Brabant"))
+                {
+                    bxNB.Visible = true;
+                    nb = false;
+                    bxNB.Text = data_format("Noord-Brabant", return_misdrijf_type());
+                }
+                if (orderedList[i].Contains("Noord-Holland"))
+                {
+                    bxNH.Visible = true;
+                    nh = false;
+                    bxNH.Text = data_format("Noord-Holland", return_misdrijf_type());
+                }
+                if (orderedList[i].Contains("Overijssel"))
+                {
+                    bxOverijssel.Visible = true;
+                    overijssel = false;
+                    bxOverijssel.Text = data_format("Overijssel", return_misdrijf_type());
+                }
+                if (orderedList[i].Contains("Utrecht"))
+                {
+                    bxUtrecht.Visible = true;
+                    utrecht = false;
+                    bxUtrecht.Text = data_format("Utrecht", return_misdrijf_type());
+                }
+                if (orderedList[i].Contains("Zeeland"))
+                {
+                    bxZeeland.Visible = true;
+                    zeeland = false;
+                    bxZeeland.Text = data_format("Zeeland", return_misdrijf_type());
+                }
+                if (orderedList[i].Contains("Zuid-Holland"))
+                {
+                    bxZH.Visible = true;
+                    zh = false;
+                    bxZH.Text = data_format("Zuid-Holland", return_misdrijf_type());
+                }
             }
-            if (flevo)
+            if (flevoland)
             {
                 bxFlevoland.Visible = false;
             }
@@ -406,6 +591,42 @@ namespace Project3
             if (groningen)
             {
                 bxGroningen.Visible = false;
+            }
+            if (friesland)
+            {
+                bxFriesland.Visible = false;
+            }
+            if (gelderland)
+            {
+                bxGelderland.Visible = false;
+            }
+            if (limburg)
+            {
+                bxLimburg.Visible = false;
+            }
+            if (nb)
+            {
+                bxNB.Visible = false;
+            }
+            if (nh)
+            {
+                bxNH.Visible = false;
+            }
+            if (overijssel)
+            {
+                bxOverijssel.Visible = false;
+            }
+            if (utrecht)
+            {
+                bxUtrecht.Visible = false;
+            }
+            if (zeeland)
+            {
+                bxZeeland.Visible = false;
+            }
+            if (zh)
+            {
+                bxZH.Visible = false;
             }
         }
 

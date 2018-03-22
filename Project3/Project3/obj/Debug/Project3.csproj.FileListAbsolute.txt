@@ -8,3 +8,13 @@ C:\Users\Nofit\Documents\GitHub\project-3-Data\Project3\Project3\obj\Debug\Proje
 C:\Users\Nofit\Documents\GitHub\project-3-Data\Project3\Project3\obj\Debug\Project3.csproj.CoreCompileInputs.cache
 C:\Users\Nofit\Documents\GitHub\project-3-Data\Project3\Project3\obj\Debug\Project3.exe
 C:\Users\Nofit\Documents\GitHub\project-3-Data\Project3\Project3\obj\Debug\Project3.pdb
+C:\Users\joess\Documents\GitHub\project-3-Data\Project3\Project3\obj\Debug\Project3.exe
+C:\Users\joess\Documents\GitHub\project-3-Data\Project3\Project3\obj\Debug\Project3.pdb
+C:\Users\joess\Documents\GitHub\project-3-Data\Project3\Project3\bin\Debug\Project3.exe.config
+C:\Users\joess\Documents\GitHub\project-3-Data\Project3\Project3\bin\Debug\Project3.exe
+C:\Users\joess\Documents\GitHub\project-3-Data\Project3\Project3\bin\Debug\Project3.pdb
+C:\Users\joess\Documents\GitHub\project-3-Data\Project3\Project3\obj\Debug\Project3.csprojResolveAssemblyReference.cache
+C:\Users\joess\Documents\GitHub\project-3-Data\Project3\Project3\obj\Debug\Project3.Form1.resources
+C:\Users\joess\Documents\GitHub\project-3-Data\Project3\Project3\obj\Debug\Project3.Properties.Resources.resources
+C:\Users\joess\Documents\GitHub\project-3-Data\Project3\Project3\obj\Debug\Project3.csproj.GenerateResource.Cache
+C:\Users\joess\Documents\GitHub\project-3-Data\Project3\Project3\obj\Debug\Project3.csproj.CoreCompileInputs.cache
