@@ -15,6 +15,7 @@ namespace Project3
     {
         public Form1()
         {
+
             InitializeComponent();
         }
 
@@ -44,7 +45,8 @@ namespace Project3
         bool green = false;
         bool red = false;
         bool yellow = false;
-    
+
+
 
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -147,6 +149,7 @@ namespace Project3
 
         private void checkedListBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
+            chosenMisdaadbx.Visible = true;
             set_data_and_map(CheckLastprovince()); //references to the function.. what shows data on screen and changes map to corresponding province
             return_checked_provinces();
             if(provinceBox.GetItemChecked(0) == false & provinceBox.GetItemChecked(1) == false & provinceBox.GetItemChecked(2) == false
@@ -358,7 +361,7 @@ namespace Project3
                     }
                     else
                     {
-                        bxFlevoland.BackColor = Color.White;
+                        bxFlevoland.BackColor = Color.FromKnownColor(KnownColor.Control);
                     };
                 }
                 if (orderedList[i].Contains("Drenthe"))
@@ -380,7 +383,7 @@ namespace Project3
                     }
                     else
                     {
-                        bxDrenthe.BackColor = Color.White;
+                        bxDrenthe.BackColor = Color.FromKnownColor(KnownColor.Control);
                     };
                 }
                 if (orderedList[i].Contains("Groningen"))
@@ -402,7 +405,7 @@ namespace Project3
                     }
                     else
                     {
-                        bxGroningen.BackColor = Color.White;
+                        bxGroningen.BackColor = Color.FromKnownColor(KnownColor.Control);
                     };
                 }
                 if (orderedList[i].Contains("Friesland"))
@@ -424,7 +427,7 @@ namespace Project3
                     }
                     else
                     {
-                        bxFriesland.BackColor = Color.White;
+                        bxFriesland.BackColor = Color.FromKnownColor(KnownColor.Control);
                     };
                 }
                 if (orderedList[i].Contains("Gelderland"))
@@ -446,7 +449,7 @@ namespace Project3
                     }
                     else
                     {
-                        bxGelderland.BackColor = Color.White;
+                        bxGelderland.BackColor = Color.FromKnownColor(KnownColor.Control);
                     };
                 }
                 if (orderedList[i].Contains("Limburg"))
@@ -468,7 +471,7 @@ namespace Project3
                     }
                     else
                     {
-                        bxLimburg.BackColor = Color.White;
+                        bxLimburg.BackColor = Color.FromKnownColor(KnownColor.Control);
                     };
                 }
                 if (orderedList[i].Contains("Noord-Brabant"))
@@ -490,7 +493,7 @@ namespace Project3
                     }
                     else
                     {
-                        bxNB.BackColor = Color.White;
+                        bxNB.BackColor = Color.FromKnownColor(KnownColor.Control);
                     };
                 }
                 if (orderedList[i].Contains("Noord-Holland"))
@@ -512,7 +515,7 @@ namespace Project3
                     }
                     else
                     {
-                        bxNH.BackColor = Color.White;
+                        bxNH.BackColor = Color.FromKnownColor(KnownColor.Control);
                     };
                 }
                 if (orderedList[i].Contains("Overijssel"))
@@ -534,7 +537,7 @@ namespace Project3
                     }
                     else
                     {
-                        bxOverijssel.BackColor = Color.White;
+                        bxOverijssel.BackColor = Color.FromKnownColor(KnownColor.Control);
                     };
                 }
                 if (orderedList[i].Contains("Utrecht"))
@@ -556,7 +559,7 @@ namespace Project3
                     }
                     else
                     {
-                        bxUtrecht.BackColor = Color.White;
+                        bxUtrecht.BackColor = Color.FromKnownColor(KnownColor.Control);
                     };
                 }
                 if (orderedList[i].Contains("Zeeland"))
@@ -578,7 +581,7 @@ namespace Project3
                     }
                     else
                     {
-                        bxZeeland.BackColor = Color.White;
+                        bxZeeland.BackColor = Color.FromKnownColor(KnownColor.Control);
                     };
                 }
                 if (orderedList[i].Contains("Zuid-Holland"))
@@ -600,7 +603,7 @@ namespace Project3
                     }
                     else
                     {
-                        bxZH.BackColor = Color.White;
+                        bxZH.BackColor = Color.FromKnownColor(KnownColor.Control);
                     };
                 }
             }
@@ -704,6 +707,8 @@ namespace Project3
                 misdaad_aantal = true;
                 procent_aantal = false;
                 VergelijkJaarbalk.Visible = false;
+                chosenCompareYearbx.Visible = false;
+                compareLbl.Visible = false;
                 label2010.Visible = false;
                 label2011.Visible = false;
                 label2012.Visible = false;
@@ -721,6 +726,8 @@ namespace Project3
                 misdaad_aantal = false;
                 procent_aantal = false;
                 VergelijkJaarbalk.Visible = false;
+                chosenCompareYearbx.Visible = false;
+                compareLbl.Visible = false;
                 label2010.Visible = false;
                 label2011.Visible = false;
                 label2012.Visible = false;
@@ -739,6 +746,8 @@ namespace Project3
                 procent_aantal = true;
                 return_checked_provinces();
                 VergelijkJaarbalk.Visible = true;
+                chosenCompareYearbx.Visible = true;
+                compareLbl.Visible= true;
                 label2010.Visible = true;
                 label2011.Visible = true;
                 label2012.Visible = true;
@@ -773,6 +782,52 @@ namespace Project3
         {
             trackbar_index2 = VergelijkJaarbalk.Value;
             return_checked_provinces();
-        }   
+            //  set_data_and_map(CheckLastprovince()); //references to the function.. what shows data on screen and changes map to corresponding province
+            //   return_checked_provinces();
+            for (int index = 0; index < 7; index++)
+            {
+                if (trackbar_index2 == index)
+                {
+                    chosenCompareYearbx.Text = years[index];
+                }
+            }
+        }
+
+        private void textBox1_TextChanged_3(object sender, EventArgs e)
+        {
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_3(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void Sub3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void chosenMisdaadbx_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Back_Click(object sender, EventArgs e)
+        {
+            Hoofdmenu hoofd = new Hoofdmenu();
+            hoofd.Show();
+            this.Hide();
+            
+        }
     }
 }
