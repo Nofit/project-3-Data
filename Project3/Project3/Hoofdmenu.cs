@@ -12,7 +12,6 @@ namespace Project3
 {
     public partial class Hoofdmenu : Form
     {
-        public bool show = true;
         Form1 sub1 = new Form1();
         ///Form2 sub2 = new Form2()    
         public Hoofdmenu()
@@ -29,11 +28,8 @@ namespace Project3
 
         private void buttonSub1_Click(object sender, EventArgs e)
         {
-            show = false;
             sub1.Show();
-            this.Hide();
-            
-            
+            this.Hide();         
         }
 
         private void buttonSub3_Click(object sender, EventArgs e)

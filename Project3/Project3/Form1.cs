@@ -829,5 +829,36 @@ namespace Project3
             this.Hide();
             
         }
+
+        private void button1_Click_4(object sender, EventArgs e)
+        {
+            crimeCategoryBox.Visible = true;
+            crimeCatLabel.Visible = true;
+            for (int index = 0; index < provincies.Length; index++)
+            {
+                if (orderedList.Contains(provincies[index]) == false)
+                {
+                    provinceBox.SetItemChecked(index, true);
+                    set_settings_province(index, provincies[index]);
+                }
+
+            }
+            set_data_and_map(CheckLastprovince()); //references to the function.. what shows data on screen and changes map to corresponding province
+            return_checked_provinces();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            for (int index = 0; index < provincies.Length; index++)
+            {
+                if (orderedList.Contains(provincies[index]) == true)
+                {
+                    provinceBox.SetItemChecked(index, false);
+                    set_settings_province(index, provincies[index]);
+                }
+            }
+            set_data_and_map(CheckLastprovince()); //references to the function.. what shows data on screen and changes map to corresponding province
+            return_checked_provinces();
+        }
     }
 }

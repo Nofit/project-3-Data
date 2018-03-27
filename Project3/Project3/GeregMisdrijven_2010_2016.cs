@@ -78,13 +78,11 @@ namespace Project3
                 //Creating Sql Data adapter with cmd
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                 conn.Open();
-                Console.WriteLine("Data connectie werkt.");
                 adapter.Fill(dt);
 
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Data connectie werkt niet.");
             }
             finally
             {

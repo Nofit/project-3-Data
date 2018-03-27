@@ -37,9 +37,9 @@
             // 
             // buttonSub3
             // 
-            this.buttonSub3.Location = new System.Drawing.Point(408, 12);
+            this.buttonSub3.Location = new System.Drawing.Point(532, 242);
             this.buttonSub3.Name = "buttonSub3";
-            this.buttonSub3.Size = new System.Drawing.Size(359, 142);
+            this.buttonSub3.Size = new System.Drawing.Size(216, 142);
             this.buttonSub3.TabIndex = 6;
             this.buttonSub3.Text = "button3";
             this.buttonSub3.UseVisualStyleBackColor = true;
@@ -47,19 +47,21 @@
             // 
             // buttonSub2
             // 
-            this.buttonSub2.Location = new System.Drawing.Point(228, 160);
+            this.buttonSub2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.buttonSub2.Location = new System.Drawing.Point(292, 242);
             this.buttonSub2.Name = "buttonSub2";
-            this.buttonSub2.Size = new System.Drawing.Size(359, 142);
+            this.buttonSub2.Size = new System.Drawing.Size(216, 142);
             this.buttonSub2.TabIndex = 5;
             this.buttonSub2.Text = "button2";
             this.buttonSub2.UseVisualStyleBackColor = true;
             // 
             // buttonSub1
             // 
+            this.buttonSub1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonSub1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSub1.Location = new System.Drawing.Point(43, 12);
+            this.buttonSub1.Location = new System.Drawing.Point(53, 241);
             this.buttonSub1.Name = "buttonSub1";
-            this.buttonSub1.Size = new System.Drawing.Size(359, 142);
+            this.buttonSub1.Size = new System.Drawing.Size(216, 142);
             this.buttonSub1.TabIndex = 4;
             this.buttonSub1.Text = "Misdaad per provincie";
             this.buttonSub1.UseVisualStyleBackColor = true;
@@ -67,11 +69,12 @@
             // 
             // buttonQuit
             // 
+            this.buttonQuit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonQuit.FlatAppearance.BorderColor = System.Drawing.Color.CornflowerBlue;
             this.buttonQuit.FlatAppearance.BorderSize = 0;
             this.buttonQuit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonQuit.Image = ((System.Drawing.Image)(resources.GetObject("buttonQuit.Image")));
-            this.buttonQuit.Location = new System.Drawing.Point(358, 331);
+            this.buttonQuit.Location = new System.Drawing.Point(690, 3);
             this.buttonQuit.Name = "buttonQuit";
             this.buttonQuit.Size = new System.Drawing.Size(98, 89);
             this.buttonQuit.TabIndex = 7;
@@ -82,11 +85,12 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 603);
             this.Controls.Add(this.buttonQuit);
             this.Controls.Add(this.buttonSub3);
             this.Controls.Add(this.buttonSub2);
             this.Controls.Add(this.buttonSub1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Hoofdmenu";
             this.Text = "Hoofdmenu";
             this.Load += new System.EventHandler(this.Hoofdmenu_Load);
