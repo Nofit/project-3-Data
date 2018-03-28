@@ -84,7 +84,7 @@
             // 
             this.Jaarbalk.BackColor = System.Drawing.Color.CornflowerBlue;
             this.Jaarbalk.LargeChange = 1;
-            this.Jaarbalk.Location = new System.Drawing.Point(188, 813);
+            this.Jaarbalk.Location = new System.Drawing.Point(227, 816);
             this.Jaarbalk.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Jaarbalk.Maximum = 6;
             this.Jaarbalk.Name = "Jaarbalk";
@@ -96,11 +96,11 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.PaleGreen;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Indigo;
-            this.label5.Location = new System.Drawing.Point(186, 852);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.SeaGreen;
+            this.label5.Location = new System.Drawing.Point(221, 855);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(44, 17);
+            this.label5.Size = new System.Drawing.Size(49, 20);
             this.label5.TabIndex = 9;
             this.label5.Text = "2010";
             // 
@@ -108,11 +108,11 @@
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.PaleGreen;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Indigo;
-            this.label6.Location = new System.Drawing.Point(292, 852);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.SeaGreen;
+            this.label6.Location = new System.Drawing.Point(325, 855);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(44, 17);
+            this.label6.Size = new System.Drawing.Size(49, 20);
             this.label6.TabIndex = 10;
             this.label6.Text = "2011";
             // 
@@ -120,11 +120,11 @@
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.PaleGreen;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Indigo;
-            this.label7.Location = new System.Drawing.Point(394, 852);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.SeaGreen;
+            this.label7.Location = new System.Drawing.Point(427, 855);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(44, 17);
+            this.label7.Size = new System.Drawing.Size(49, 20);
             this.label7.TabIndex = 11;
             this.label7.Text = "2012";
             // 
@@ -132,11 +132,11 @@
             // 
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.PaleGreen;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Indigo;
-            this.label8.Location = new System.Drawing.Point(602, 852);
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.SeaGreen;
+            this.label8.Location = new System.Drawing.Point(636, 855);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(44, 17);
+            this.label8.Size = new System.Drawing.Size(49, 20);
             this.label8.TabIndex = 12;
             this.label8.Text = "2014";
             // 
@@ -144,11 +144,11 @@
             // 
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.PaleGreen;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Indigo;
-            this.label10.Location = new System.Drawing.Point(807, 852);
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.SeaGreen;
+            this.label10.Location = new System.Drawing.Point(843, 855);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(44, 17);
+            this.label10.Size = new System.Drawing.Size(49, 20);
             this.label10.TabIndex = 14;
             this.label10.Text = "2016";
             // 
@@ -157,7 +157,7 @@
             this.provinceLable.AutoSize = true;
             this.provinceLable.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.provinceLable.ForeColor = System.Drawing.Color.White;
-            this.provinceLable.Location = new System.Drawing.Point(774, 132);
+            this.provinceLable.Location = new System.Drawing.Point(771, 206);
             this.provinceLable.Name = "provinceLable";
             this.provinceLable.Size = new System.Drawing.Size(113, 28);
             this.provinceLable.TabIndex = 30;
@@ -169,7 +169,7 @@
             this.crimeCatLabel.AutoSize = true;
             this.crimeCatLabel.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.crimeCatLabel.ForeColor = System.Drawing.Color.White;
-            this.crimeCatLabel.Location = new System.Drawing.Point(774, 514);
+            this.crimeCatLabel.Location = new System.Drawing.Point(771, 535);
             this.crimeCatLabel.Name = "crimeCatLabel";
             this.crimeCatLabel.Size = new System.Drawing.Size(146, 28);
             this.crimeCatLabel.TabIndex = 31;
@@ -181,7 +181,7 @@
             // 
             this.provinceBox.BackColor = System.Drawing.SystemColors.Control;
             this.provinceBox.CheckOnClick = true;
-            this.provinceBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.provinceBox.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.provinceBox.ForeColor = System.Drawing.Color.Indigo;
             this.provinceBox.FormattingEnabled = true;
             this.provinceBox.ImeMode = System.Windows.Forms.ImeMode.Off;
@@ -199,11 +199,10 @@
             "Utrecht",
             "Zeeland",
             "Zuid-Holland"});
-            this.provinceBox.Location = new System.Drawing.Point(779, 180);
+            this.provinceBox.Location = new System.Drawing.Point(776, 236);
             this.provinceBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.provinceBox.MultiColumn = true;
             this.provinceBox.Name = "provinceBox";
-            this.provinceBox.Size = new System.Drawing.Size(184, 288);
+            this.provinceBox.Size = new System.Drawing.Size(306, 288);
             this.provinceBox.TabIndex = 35;
             this.provinceBox.ThreeDCheckBoxes = true;
             this.provinceBox.UseCompatibleTextRendering = true;
@@ -213,13 +212,13 @@
             // 
             this.crimeCategoryBox.BackColor = System.Drawing.SystemColors.Control;
             this.crimeCategoryBox.CheckOnClick = true;
-            this.crimeCategoryBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.crimeCategoryBox.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.crimeCategoryBox.ForeColor = System.Drawing.Color.Indigo;
             this.crimeCategoryBox.FormattingEnabled = true;
             this.crimeCategoryBox.HorizontalExtent = 100;
             this.crimeCategoryBox.IntegralHeight = false;
             this.crimeCategoryBox.Items.AddRange(new object[] {
-            "Totaal\t",
+            "Totale misdrijven",
             "Vermogensmisdrijven\t",
             "Vernielingen",
             "Gewelds- en seksuele misdrijven",
@@ -228,7 +227,7 @@
             "Drugsmisdrijven",
             "(Vuur)wapenmisdrijven",
             "Misdrijven overige wetten"});
-            this.crimeCategoryBox.Location = new System.Drawing.Point(779, 563);
+            this.crimeCategoryBox.Location = new System.Drawing.Point(776, 566);
             this.crimeCategoryBox.Margin = new System.Windows.Forms.Padding(4, 3, 2, 2);
             this.crimeCategoryBox.Name = "crimeCategoryBox";
             this.crimeCategoryBox.Size = new System.Drawing.Size(306, 218);
@@ -242,11 +241,11 @@
             // 
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.Color.PaleGreen;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.Indigo;
-            this.label13.Location = new System.Drawing.Point(492, 852);
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.SeaGreen;
+            this.label13.Location = new System.Drawing.Point(531, 855);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(44, 17);
+            this.label13.Size = new System.Drawing.Size(49, 20);
             this.label13.TabIndex = 59;
             this.label13.Text = "2013";
             // 
@@ -254,11 +253,11 @@
             // 
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.Color.PaleGreen;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.Indigo;
-            this.label14.Location = new System.Drawing.Point(702, 852);
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.SeaGreen;
+            this.label14.Location = new System.Drawing.Point(739, 855);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(44, 17);
+            this.label14.Size = new System.Drawing.Size(49, 20);
             this.label14.TabIndex = 60;
             this.label14.Text = "2015";
             // 
@@ -424,17 +423,17 @@
             this.comboBox1.BackColor = System.Drawing.SystemColors.Control;
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.ForeColor = System.Drawing.Color.Indigo;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Misdaad aantallen",
             "Misdaad per 1.000 inwoners",
-            "Procentuele verandering"});
-            this.comboBox1.Location = new System.Drawing.Point(779, 21);
+            "Procentuele verandering over jaren"});
+            this.comboBox1.Location = new System.Drawing.Point(776, 44);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(330, 30);
+            this.comboBox1.Size = new System.Drawing.Size(306, 26);
             this.comboBox1.TabIndex = 77;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -445,12 +444,12 @@
             this.chosenMisdaadbx.Cursor = System.Windows.Forms.Cursors.No;
             this.chosenMisdaadbx.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chosenMisdaadbx.ForeColor = System.Drawing.Color.Indigo;
-            this.chosenMisdaadbx.Location = new System.Drawing.Point(265, 19);
+            this.chosenMisdaadbx.Location = new System.Drawing.Point(295, 40);
             this.chosenMisdaadbx.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chosenMisdaadbx.Multiline = true;
             this.chosenMisdaadbx.Name = "chosenMisdaadbx";
             this.chosenMisdaadbx.ReadOnly = true;
-            this.chosenMisdaadbx.Size = new System.Drawing.Size(417, 35);
+            this.chosenMisdaadbx.Size = new System.Drawing.Size(417, 33);
             this.chosenMisdaadbx.TabIndex = 78;
             this.chosenMisdaadbx.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.chosenMisdaadbx.Visible = false;
@@ -461,10 +460,9 @@
             this.chosenYearbx.BackColor = System.Drawing.Color.PaleGreen;
             this.chosenYearbx.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.chosenYearbx.Cursor = System.Windows.Forms.Cursors.No;
-            this.chosenYearbx.Enabled = false;
             this.chosenYearbx.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chosenYearbx.ForeColor = System.Drawing.Color.Indigo;
-            this.chosenYearbx.Location = new System.Drawing.Point(123, 278);
+            this.chosenYearbx.ForeColor = System.Drawing.Color.SeaGreen;
+            this.chosenYearbx.Location = new System.Drawing.Point(123, 263);
             this.chosenYearbx.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chosenYearbx.Multiline = true;
             this.chosenYearbx.Name = "chosenYearbx";
@@ -478,7 +476,7 @@
             // secretlableshh
             // 
             this.secretlableshh.AutoSize = true;
-            this.secretlableshh.Location = new System.Drawing.Point(918, 945);
+            this.secretlableshh.Location = new System.Drawing.Point(722, 972);
             this.secretlableshh.Name = "secretlableshh";
             this.secretlableshh.Size = new System.Drawing.Size(0, 17);
             this.secretlableshh.TabIndex = 88;
@@ -518,7 +516,7 @@
             // 
             this.VergelijkJaarbalk.BackColor = System.Drawing.Color.CornflowerBlue;
             this.VergelijkJaarbalk.LargeChange = 1;
-            this.VergelijkJaarbalk.Location = new System.Drawing.Point(188, 899);
+            this.VergelijkJaarbalk.Location = new System.Drawing.Point(227, 902);
             this.VergelijkJaarbalk.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.VergelijkJaarbalk.Maximum = 6;
             this.VergelijkJaarbalk.Name = "VergelijkJaarbalk";
@@ -530,7 +528,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(503, 899);
+            this.label17.Location = new System.Drawing.Point(542, 902);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(0, 17);
             this.label17.TabIndex = 63;
@@ -540,11 +538,11 @@
             // 
             this.label2010.AutoSize = true;
             this.label2010.BackColor = System.Drawing.Color.Plum;
-            this.label2010.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2010.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2010.ForeColor = System.Drawing.Color.Indigo;
-            this.label2010.Location = new System.Drawing.Point(185, 929);
+            this.label2010.Location = new System.Drawing.Point(221, 941);
             this.label2010.Name = "label2010";
-            this.label2010.Size = new System.Drawing.Size(44, 17);
+            this.label2010.Size = new System.Drawing.Size(49, 20);
             this.label2010.TabIndex = 81;
             this.label2010.Text = "2010";
             this.label2010.Visible = false;
@@ -553,11 +551,11 @@
             // 
             this.label2011.AutoSize = true;
             this.label2011.BackColor = System.Drawing.Color.Plum;
-            this.label2011.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2011.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2011.ForeColor = System.Drawing.Color.Indigo;
-            this.label2011.Location = new System.Drawing.Point(292, 929);
+            this.label2011.Location = new System.Drawing.Point(325, 941);
             this.label2011.Name = "label2011";
-            this.label2011.Size = new System.Drawing.Size(44, 17);
+            this.label2011.Size = new System.Drawing.Size(49, 20);
             this.label2011.TabIndex = 82;
             this.label2011.Text = "2011";
             this.label2011.Visible = false;
@@ -566,11 +564,11 @@
             // 
             this.label2012.AutoSize = true;
             this.label2012.BackColor = System.Drawing.Color.Plum;
-            this.label2012.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2012.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2012.ForeColor = System.Drawing.Color.Indigo;
-            this.label2012.Location = new System.Drawing.Point(394, 929);
+            this.label2012.Location = new System.Drawing.Point(427, 941);
             this.label2012.Name = "label2012";
-            this.label2012.Size = new System.Drawing.Size(44, 17);
+            this.label2012.Size = new System.Drawing.Size(49, 20);
             this.label2012.TabIndex = 83;
             this.label2012.Text = "2012";
             this.label2012.Visible = false;
@@ -579,11 +577,11 @@
             // 
             this.label2014.AutoSize = true;
             this.label2014.BackColor = System.Drawing.Color.Plum;
-            this.label2014.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2014.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2014.ForeColor = System.Drawing.Color.Indigo;
-            this.label2014.Location = new System.Drawing.Point(602, 929);
+            this.label2014.Location = new System.Drawing.Point(636, 941);
             this.label2014.Name = "label2014";
-            this.label2014.Size = new System.Drawing.Size(44, 17);
+            this.label2014.Size = new System.Drawing.Size(49, 20);
             this.label2014.TabIndex = 84;
             this.label2014.Text = "2014";
             this.label2014.Visible = false;
@@ -592,11 +590,11 @@
             // 
             this.label2016.AutoSize = true;
             this.label2016.BackColor = System.Drawing.Color.Plum;
-            this.label2016.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2016.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2016.ForeColor = System.Drawing.Color.Indigo;
-            this.label2016.Location = new System.Drawing.Point(807, 929);
+            this.label2016.Location = new System.Drawing.Point(843, 941);
             this.label2016.Name = "label2016";
-            this.label2016.Size = new System.Drawing.Size(44, 17);
+            this.label2016.Size = new System.Drawing.Size(49, 20);
             this.label2016.TabIndex = 85;
             this.label2016.Text = "2016";
             this.label2016.Visible = false;
@@ -606,11 +604,11 @@
             // 
             this.label2013.AutoSize = true;
             this.label2013.BackColor = System.Drawing.Color.Plum;
-            this.label2013.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2013.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2013.ForeColor = System.Drawing.Color.Indigo;
-            this.label2013.Location = new System.Drawing.Point(492, 929);
+            this.label2013.Location = new System.Drawing.Point(531, 941);
             this.label2013.Name = "label2013";
-            this.label2013.Size = new System.Drawing.Size(44, 17);
+            this.label2013.Size = new System.Drawing.Size(49, 20);
             this.label2013.TabIndex = 86;
             this.label2013.Text = "2013";
             this.label2013.Visible = false;
@@ -619,11 +617,11 @@
             // 
             this.label2015.AutoSize = true;
             this.label2015.BackColor = System.Drawing.Color.Plum;
-            this.label2015.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2015.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2015.ForeColor = System.Drawing.Color.Indigo;
-            this.label2015.Location = new System.Drawing.Point(702, 929);
+            this.label2015.Location = new System.Drawing.Point(739, 941);
             this.label2015.Name = "label2015";
-            this.label2015.Size = new System.Drawing.Size(44, 17);
+            this.label2015.Size = new System.Drawing.Size(49, 20);
             this.label2015.TabIndex = 87;
             this.label2015.Text = "2015";
             this.label2015.Visible = false;
@@ -642,7 +640,9 @@
             // 
             // Back
             // 
-            this.Back.Location = new System.Drawing.Point(12, 12);
+            this.Back.Font = new System.Drawing.Font("Franklin Gothic Medium", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Back.ForeColor = System.Drawing.Color.Indigo;
+            this.Back.Location = new System.Drawing.Point(42, 35);
             this.Back.Name = "Back";
             this.Back.Size = new System.Drawing.Size(122, 42);
             this.Back.TabIndex = 91;
@@ -653,7 +653,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(921, 89);
+            this.button1.Location = new System.Drawing.Point(921, 147);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(112, 30);
             this.button1.TabIndex = 92;
@@ -664,7 +664,8 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(779, 89);
+            this.button2.ForeColor = System.Drawing.Color.Firebrick;
+            this.button2.Location = new System.Drawing.Point(776, 147);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(136, 30);
             this.button2.TabIndex = 93;
@@ -722,10 +723,12 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Jaarbalk);
             this.Controls.Add(this.VergelijkJaarbalk);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.ForeColor = System.Drawing.Color.SeaGreen;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form1";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

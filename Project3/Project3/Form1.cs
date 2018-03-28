@@ -45,9 +45,7 @@ namespace Project3
         bool green = false;
         bool red = false;
         bool yellow = false;
-
-
-
+        int eenmalig = 0;
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -193,19 +191,15 @@ namespace Project3
                     aantalmisdaden = decimal.Parse(data);
                     bevolking = decimal.Parse(bdata);
                     sum = decimal.Round(aantalmisdaden / (bevolking / 1000), 2);
-
-
                     if (procent_aantal == true)
                     {
                         foreach (DataRow row1 in dt.Rows) //Counts the rows from the Table
                         {
                             data2 = data2 + (row1[trackbar_index2 + 1]);
-
                             foreach (DataRow row2 in bt.Rows)
                             {
                                 pdata = pdata + (row2[trackbar_index2 + 2]);
                             }
-
                             sum2 = decimal.Round(((decimal.Parse(data2) / decimal.Parse(pdata)) / 1000) * 1000000, (2));
                             Console.WriteLine("Sum2=" + sum2);
                             Console.WriteLine("Sum=" + sum);
@@ -221,7 +215,6 @@ namespace Project3
                                 green = false;
                                 red = false;
                                 yellow = true;
-
                             }
                             else
                             {
@@ -229,8 +222,6 @@ namespace Project3
                                 red = true;
                                 yellow = false;
                             }
-
-
                         }
                     }
                     data = sum.ToString();
@@ -245,7 +236,6 @@ namespace Project3
 
         private void button1_Click_2(object sender, EventArgs e) //This button sums up all the items in orderedList
         {
-
         }
         
         private string CheckLastprovince() //This function checks what the last checked province and returns it, when counter -1, means list is empty therefore nothing is selected.
@@ -265,9 +255,12 @@ namespace Project3
         {
             if (provinceBox.GetItemChecked(index_num)) //checks if checked at the given index
             {
-                crimeCategoryBox.SetSelected(0, true); //Sets automatically selection at misdrijven Totaal filter
-                crimeCategoryBox.SetItemChecked(0, true); //Sets automatically check at misdrijven Totaal filter
-
+                if(eenmalig < 1)
+                {
+                    crimeCategoryBox.SetSelected(0, true); //Sets automatically selection at misdrijven Totaal filter
+                    crimeCategoryBox.SetItemChecked(0, true); //Sets automatically check at misdrijven Totaal filter
+                    eenmalig++;
+                }    
                 if (counter < 11) //Counts up only till 2 ... 2 indicates the number of indexes in the checkboxlist and so the number of indexes allowed in the orderedlist 
                 {
                     counter++;
@@ -755,6 +748,8 @@ namespace Project3
                 label2014.Visible = true;
                 label2015.Visible = true;
                 label2016.Visible = true;
+                Jaarbalk.Value = 0;
+                chosenYearbx.Text = "2010";
             }
         }
         private void crime_uncheck(int forbidden_int)

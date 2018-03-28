@@ -22,8 +22,8 @@ namespace Project3
 
         private void buttonQuit_Click(object sender, EventArgs e)
         {
-            this.Close();
-            sub1.Close();
+            Application.Exit();//this.Close();
+            //sub1.Close();
         }
 
         private void buttonSub1_Click(object sender, EventArgs e)
