@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Project_3_Data;
+using WindowsFormsApp1test;
 
 namespace Project3
 {
@@ -15,6 +16,8 @@ namespace Project3
     {
         Form1 sub1 = new Form1();
         StartScreen s = new StartScreen();
+        FormMisdaad m = new FormMisdaad();
+       
    
         public Hoofdmenu()
         {
@@ -36,6 +39,7 @@ namespace Project3
 
         private void buttonSub3_Click(object sender, EventArgs e)
         {
+            m.Show();
             this.Hide();
         }
 

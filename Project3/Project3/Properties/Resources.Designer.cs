@@ -123,6 +123,16 @@ namespace Project3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap kaart_nederland {
+            get {
+                object obj = ResourceManager.GetObject("kaart_nederland", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Limburg_arced {
             get {
                 object obj = ResourceManager.GetObject("Limburg_arced", resourceCulture);

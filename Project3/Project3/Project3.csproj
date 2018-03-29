@@ -61,11 +61,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Datagetter.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMisdaad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMisdaad.Designer.cs">
+      <DependentUpon>FormMisdaad.cs</DependentUpon>
     </Compile>
     <Compile Include="GeregMisdrijven_2010_2016.cs" />
     <Compile Include="Hoofdmenu.cs">
@@ -104,6 +111,9 @@
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMisdaad.resx">
+      <DependentUpon>FormMisdaad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Hoofdmenu.resx">
       <DependentUpon>Hoofdmenu.cs</DependentUpon>
@@ -198,6 +208,9 @@
       <Project>{1d5f33e2-507e-4aa1-b1ff-b009ae5b7e0f}</Project>
       <Name>Project 3 Data</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kaart_nederland.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
