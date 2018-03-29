@@ -74,3 +74,4 @@ C:\Users\Acer\Documents\GitHub\project-3-Data\Project3\Project3\obj\Debug\Projec
 C:\Users\Acer\Documents\GitHub\project-3-Data\Project3\Project3\obj\Debug\Project3.exe
 C:\Users\Acer\Documents\GitHub\project-3-Data\Project3\Project3\obj\Debug\Project3.pdb
 C:\Users\Acer\Documents\GitHub\project-3-Data\Project3\Project3\obj\Debug\WindowsFormsApp1test.FormMisdaad.resources
+C:\Users\Nofit\Documents\GitHub\project-3-Data\Project3\Project3\obj\Debug\WindowsFormsApp1test.FormMisdaad.resources
