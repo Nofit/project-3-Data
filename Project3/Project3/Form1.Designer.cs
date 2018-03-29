@@ -640,36 +640,36 @@
             // 
             // Back
             // 
-            this.Back.Font = new System.Drawing.Font("Franklin Gothic Medium", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Back.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Back.ForeColor = System.Drawing.Color.Indigo;
-            this.Back.Location = new System.Drawing.Point(42, 35);
+            this.Back.Location = new System.Drawing.Point(23, 24);
             this.Back.Name = "Back";
-            this.Back.Size = new System.Drawing.Size(122, 42);
+            this.Back.Size = new System.Drawing.Size(134, 35);
             this.Back.TabIndex = 91;
-            this.Back.Text = "Back";
+            this.Back.Text = "Hoofdmenu";
             this.Back.UseVisualStyleBackColor = true;
             this.Back.Click += new System.EventHandler(this.Back_Click);
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(921, 147);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(943, 159);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 30);
+            this.button1.Size = new System.Drawing.Size(139, 30);
             this.button1.TabIndex = 92;
-            this.button1.Text = "Select All";
+            this.button1.Text = "Alles selecteren";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_4);
             // 
             // button2
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Firebrick;
-            this.button2.Location = new System.Drawing.Point(776, 147);
+            this.button2.Location = new System.Drawing.Point(776, 159);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(136, 30);
+            this.button2.Size = new System.Drawing.Size(161, 30);
             this.button2.TabIndex = 93;
-            this.button2.Text = "Clear Checks";
+            this.button2.Text = "Verwijder selecties";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 

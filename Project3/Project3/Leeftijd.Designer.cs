@@ -1,4 +1,7 @@
-﻿namespace Project_3_Data
+﻿
+using Project3;
+
+namespace Project_3_Data
 {
     partial class Leeftijd
     {
@@ -30,10 +33,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Leeftijd));
-            this.project3dbsDataSet = new Project_3_Data.Project3dbsDataSet();
+            this.project3dbsDataSet = new Project3.Project3dbsDataSet();
             this.onveiligheidsbelevenis_geslacht_leeftijdBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.onveiligheidsbelevenis_geslacht_leeftijdTableAdapter = new Project_3_Data.Project3dbsDataSetTableAdapters.onveiligheidsbelevenis_geslacht_leeftijdTableAdapter();
-            this.tableAdapterManager = new Project_3_Data.Project3dbsDataSetTableAdapters.TableAdapterManager();
+            this.onveiligheidsbelevenis_geslacht_leeftijdTableAdapter = new Project3.Project3dbsDataSetTableAdapters.onveiligheidsbelevenis_geslacht_leeftijdTableAdapter();
+            this.tableAdapterManager = new Project3.Project3dbsDataSetTableAdapters.TableAdapterManager();
             this.onveiligheidsbelevenis_geslacht_leeftijdBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -81,7 +84,7 @@
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.onveiligheidsbelevenis_geslacht_leeftijdTableAdapter = this.onveiligheidsbelevenis_geslacht_leeftijdTableAdapter;
             this.tableAdapterManager.onveiligheidsbelevenis_per_regioTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = Project_3_Data.Project3dbsDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UpdateOrder = Project3.Project3dbsDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // onveiligheidsbelevenis_geslacht_leeftijdBindingNavigator
             // 
@@ -320,8 +323,8 @@
         #endregion
         private Project3dbsDataSet project3dbsDataSet;
         private System.Windows.Forms.BindingSource onveiligheidsbelevenis_geslacht_leeftijdBindingSource;
-        private Project3dbsDataSetTableAdapters.onveiligheidsbelevenis_geslacht_leeftijdTableAdapter onveiligheidsbelevenis_geslacht_leeftijdTableAdapter;
-        private Project3dbsDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private Project3.Project3dbsDataSetTableAdapters.onveiligheidsbelevenis_geslacht_leeftijdTableAdapter onveiligheidsbelevenis_geslacht_leeftijdTableAdapter;
+        private Project3.Project3dbsDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.BindingNavigator onveiligheidsbelevenis_geslacht_leeftijdBindingNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;

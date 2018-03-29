@@ -19,7 +19,7 @@ namespace Project_3_Data
         {
             InitializeComponent();
 
-            var data = new Project3dbsDataSetTableAdapters.onveiligheidsbelevenis_geslacht_leeftijdTableAdapter();
+            var data = new Project3.Project3dbsDataSetTableAdapters.onveiligheidsbelevenis_geslacht_leeftijdTableAdapter();
 
             DataBoundSeries series1 = new DataBoundSeries(data.GetData());
 

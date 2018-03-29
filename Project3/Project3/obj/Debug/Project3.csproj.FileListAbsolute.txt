@@ -45,3 +45,15 @@ C:\Users\Saleem Sarwar\Documents\GitHub\project-3-Data\Project3\Project3\obj\Deb
 C:\Users\Saleem Sarwar\Documents\GitHub\project-3-Data\Project3\Project3\obj\Debug\Project_3_Data.Leeftijd.resources
 C:\Users\Saleem Sarwar\Documents\GitHub\project-3-Data\Project3\Project3\obj\Debug\Project_3_Data.Regio.resources
 C:\Users\Saleem Sarwar\Documents\GitHub\project-3-Data\Project3\Project3\obj\Debug\Project_3_Data.StartScreen.resources
+C:\Users\Nofit\Documents\GitHub\project-3-Data\Project3\Project3\obj\Debug\Project_3_Data.Leeftijd.resources
+C:\Users\Nofit\Documents\GitHub\project-3-Data\Project3\Project3\obj\Debug\Project_3_Data.Regio.resources
+C:\Users\Nofit\Documents\GitHub\project-3-Data\Project3\Project3\obj\Debug\Project_3_Data.StartScreen.resources
+C:\Users\Nofit\Documents\GitHub\project-3-Data\Project3\Project3\bin\Debug\MindFusion.Charting.dll
+C:\Users\Nofit\Documents\GitHub\project-3-Data\Project3\Project3\bin\Debug\MindFusion.Charting.WinForms.dll
+C:\Users\Nofit\Documents\GitHub\project-3-Data\Project3\Project3\bin\Debug\MindFusion.Common.dll
+C:\Users\Nofit\Documents\GitHub\project-3-Data\Project3\Project3\bin\Debug\MindFusion.Licensing.dll
+C:\Users\Nofit\Documents\GitHub\project-3-Data\Project3\Project3\bin\Debug\MindFusion.Pdf.dll
+C:\Users\Nofit\Documents\GitHub\project-3-Data\Project3\Project3\bin\Debug\MindFusion.Svg.dll
+C:\Users\Nofit\Documents\GitHub\project-3-Data\Project3\Project3\bin\Debug\MindFusion.Gauges.dll
+C:\Users\Nofit\Documents\GitHub\project-3-Data\Project3\Project3\bin\Debug\MindFusion.Scripting.dll
+C:\Users\Nofit\Documents\GitHub\project-3-Data\Project3\Project3\obj\Debug\Project3.csproj.CopyComplete

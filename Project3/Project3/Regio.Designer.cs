@@ -1,4 +1,6 @@
-﻿namespace Project_3_Data
+﻿using Project3;
+
+namespace Project_3_Data
 {
     partial class Regio
     {
@@ -33,7 +35,7 @@
             this.onveiligheidsbelevenis_per_regioBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.onveiligheidsbelevenis_per_regioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.project3dbsDataSet = new Project_3_Data.Project3dbsDataSet();
+            this.project3dbsDataSet = new Project3.Project3dbsDataSet();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -49,8 +51,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.onveiligheidsbelevenis_per_regioTableAdapter = new Project_3_Data.Project3dbsDataSetTableAdapters.onveiligheidsbelevenis_per_regioTableAdapter();
-            this.tableAdapterManager = new Project_3_Data.Project3dbsDataSetTableAdapters.TableAdapterManager();
+            this.onveiligheidsbelevenis_per_regioTableAdapter = new Project3.Project3dbsDataSetTableAdapters.onveiligheidsbelevenis_per_regioTableAdapter();
+            this.tableAdapterManager = new Project3.Project3dbsDataSetTableAdapters.TableAdapterManager();
             this.onveiligheidsbelevenis_per_regioDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -258,7 +260,7 @@
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.onveiligheidsbelevenis_geslacht_leeftijdTableAdapter = null;
             this.tableAdapterManager.onveiligheidsbelevenis_per_regioTableAdapter = this.onveiligheidsbelevenis_per_regioTableAdapter;
-            this.tableAdapterManager.UpdateOrder = Project_3_Data.Project3dbsDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UpdateOrder = Project3.Project3dbsDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // onveiligheidsbelevenis_per_regioDataGridView
             // 
@@ -322,8 +324,8 @@
 
         private Project3dbsDataSet project3dbsDataSet;
         private System.Windows.Forms.BindingSource onveiligheidsbelevenis_per_regioBindingSource;
-        private Project3dbsDataSetTableAdapters.onveiligheidsbelevenis_per_regioTableAdapter onveiligheidsbelevenis_per_regioTableAdapter;
-        private Project3dbsDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private Project3.Project3dbsDataSetTableAdapters.onveiligheidsbelevenis_per_regioTableAdapter onveiligheidsbelevenis_per_regioTableAdapter;
+        private Project3.Project3dbsDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.BindingNavigator onveiligheidsbelevenis_per_regioBindingNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
