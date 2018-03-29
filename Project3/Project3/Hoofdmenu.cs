@@ -7,13 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Project_3_Data;
 
 namespace Project3
 {
     public partial class Hoofdmenu : Form
     {
         Form1 sub1 = new Form1();
-        ///Form2 sub2 = new Form2()    
+        StartScreen s = new StartScreen();
+   
         public Hoofdmenu()
         {
             InitializeComponent();
@@ -34,13 +36,18 @@ namespace Project3
 
         private void buttonSub3_Click(object sender, EventArgs e)
         {
-            ///sub2.Show();
             this.Hide();
         }
 
         private void Hoofdmenu_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonSub2_Click(object sender, EventArgs e)
+        {
+            s.Show();
+            this.Hide();
         }
     }
 }

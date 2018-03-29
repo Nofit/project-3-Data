@@ -30,7 +30,7 @@ namespace Project3
 
         public int jaar_2016 { get; set; }
 
-        static string myconnstrng = ConfigurationManager.ConnectionStrings["connstrng"].ConnectionString;
+        static string myconnstrng = ConfigurationManager.ConnectionStrings["Project_3_Data.Properties.Settings.Project3dbsConnectionString"].ConnectionString;
 
         //Selecting data from database
         public DataTable Select(string province, string extquery = "")

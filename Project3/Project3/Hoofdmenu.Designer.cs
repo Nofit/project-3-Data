@@ -56,6 +56,7 @@
             this.buttonSub2.TabIndex = 5;
             this.buttonSub2.Text = "button2";
             this.buttonSub2.UseVisualStyleBackColor = true;
+            this.buttonSub2.Click += new System.EventHandler(this.buttonSub2_Click);
             // 
             // buttonSub1
             // 
@@ -100,7 +101,7 @@
             this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label2.Location = new System.Drawing.Point(82, 107);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(786, 40);
+            this.label2.Size = new System.Drawing.Size(762, 38);
             this.label2.TabIndex = 9;
             this.label2.Text = "Crime in the Netherlands - Statistics Application";
             // 
